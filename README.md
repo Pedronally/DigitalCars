@@ -1,4 +1,4 @@
-El E-Commerce va a ser un sitio web de venta de autos.
+El E-Commerce va a ser un sitio web de venta de autos. De nombre Digital Cars
 
 Los participantes del grupo van a ser:
 
