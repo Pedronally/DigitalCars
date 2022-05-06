@@ -6,4 +6,8 @@ Los participantes del grupo van a ser:
 
 2. Pedro Nally: 18 años --> Mardel.
 
-3. Matias Brewda: 19 años --> Capital Federal.
+3. Juan Pablo Peralta Pino: 21 años --> Cdad. Evita.
+
+4. Matias Brewda: 19 años --> Capital Federal.
+
+5. Franco Vernego: 20 años --> Misiones.
