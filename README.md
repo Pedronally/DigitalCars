@@ -5,3 +5,5 @@ Los participantes del grupo van a ser:
 1. Mateo Panosyan: 20 años --> Zona Norte.
 
 2. Pedro Nally: 18 años --> Mardel.
+
+3. Matias Brewda: 19 años --> Capital Federal.
