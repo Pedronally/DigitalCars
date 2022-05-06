@@ -11,3 +11,16 @@ Los participantes del grupo van a ser:
 4. Matias Brewda: 19 años --> Capital Federal.
 
 5. Franco Vernego: 20 años --> Misiones.
+
+
+SITIOS WEB DE REFERENCIA:
+
+1. www.mercadolibre.com.ar
+
+2. rudal.com.ar
+
+3. www.amazon.com
+
+4. kavak.com
+
+5. luxcarusados.com.ar
