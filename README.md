@@ -16,11 +16,12 @@ Los participantes del grupo van a ser:
 SITIOS WEB DE REFERENCIA:
 
 1. www.mercadolibre.com.ar
-
+Por el estilo que maneja
 2. rudal.com.ar
-
+Por el diseño
 3. www.amazon.com
-
+Por el diseño
 4. kavak.com
-
+La disposicion de las cosas
 5. luxcarusados.com.ar
+Los colores
