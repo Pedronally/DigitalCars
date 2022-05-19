@@ -25,3 +25,6 @@ Por el diseño
 La disposicion de las cosas
 5. luxcarusados.com.ar
 Los colores
+
+
+LINK DE LOS WIREFRAMES: https://docs.google.com/document/d/1Jw2VolJ5jROAxWLRcgkWNSQkYBQQ95AqSwVd3N_NFfw/edit?usp=sharing
