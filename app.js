@@ -5,9 +5,9 @@ const app = express();
 
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, './views/home.html'))
+    res.sendFile(path.join(__dirname, './views/index.html'))
 });
 
-app.listen(3050, () => console.log("")); 
+app.listen(3050, () => console.log("Tamo Activo")); 
 
 app.use(express.static('public'));
