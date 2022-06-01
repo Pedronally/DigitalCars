@@ -2,6 +2,9 @@
     background-color: #333;
     height: 135px;
 }
+.Logo{
+    width: 135px;
+}
 .topnav a {
     color: #f2f2f2;
     padding: 14px 16px;
