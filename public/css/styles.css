@@ -41,7 +41,7 @@ body{
 }
 .productos{
     position: relative;
-    top: 50px;
+    top: 200px;
     display: flex;
     flex-wrap: wrap;
     text-align: center;
