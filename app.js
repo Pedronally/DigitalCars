@@ -9,6 +9,10 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, './views/index.html'))
 });
 
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, './views/login.html'))
+});
+
 app.listen(3070, () => console.log("Tamo Activo")); 
 
 
