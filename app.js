@@ -9,10 +9,13 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, './views/index.html'))
 });
 
-app.get('/', (req, res) => {
+app.get('/login', (req, res) => {
     res.sendFile(path.join(__dirname, './views/login.html'))
 });
+app.get('/detalleDeProducto', (req, res) => {
+    res.sendFile(path.join(__dirname, './views/detalleDeProducto.html'))
+});
 
-app.listen(3070, () => console.log("Tamo Activo")); 
+app.listen(3050, () => console.log("Tamo Activo")); 
 
 
