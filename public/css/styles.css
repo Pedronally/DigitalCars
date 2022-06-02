@@ -1,6 +1,18 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
 .topnav {
     background-color: #333;
     height: 135px;
+    width: 100%;
+    
+}
+.Logo{
+    width: 135px;
+    position: relative;
+    left: 10px;
 }
 .topnav a {
     color: #f2f2f2;
@@ -9,7 +21,7 @@
     font-size: 17px;
     position: relative;
     bottom: 20px;
-    left: 10px;
+    left: 40px;
 }
 .topnav a:hover {
     background-color: #ddd;
@@ -36,6 +48,30 @@ body{
     color: #ddd;
     justify-content: space-around;
 }
-.h3 {
-    font-family: 'Times New Roman', Times, serif;
+.productos #titulo {
+    font-weight: bold;
+}
+.topnav #carrito {
+    position: relative;
+    left: 40px;
+}
+.ModeloA {
+    position: relative;
+ text-align: center;
+ top: 130px;
+ box-sizing: border-box;
+ border: #333;
+
+}
+p{
+    background-color: #333;
+    box-sizing: border-box;
+    font-weight: 700;
+    font-size: 30px;
+    text-align: center;
+    position: relative;
+    top: 130px;
+}
+h3{
+    font-size: 45px;
 }
