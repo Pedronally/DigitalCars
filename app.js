@@ -16,4 +16,9 @@ app.get('/login', (req, res) => {
     res.sendFile(path.join(__dirname, './views/login.html'))
 });
 
+app.get('/carrito', (req, res) => {
+    res.sendFile(path.join(__dirname, './views/carrito.html'))
+});
+
+
 app.listen(3050, () => console.log("Tamo Activo"));
