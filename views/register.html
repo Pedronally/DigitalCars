@@ -17,9 +17,29 @@
             <a href="#contacto">Contacto</a>
             <a href="#about">Sobre nosotros</a>
             <a href="/carrito"> <i class="fa-solid fa-cart-shopping"></i> </a>
-            <a href="/login"> <i class="fa-solid fa-user"></i> </a>
+            <a href="/login"> <i class="fa-solid fa-user"></i></a>
+            <a href="/register"> <i class="fa-solid fa-id-card"></i></a>
         </div>
     </header>
+    <main>
+        <div class="create-formu">
+            <form class="form-registro" method="POST">
+                <legend>Registrate</legend>
+                <label for="name" > Nombre y Apellido: </label>
+                <input class="form-login input" type="text" name="name" id="name"></input>
+                <label for="user" > Email: </label>
+                <input class="form-login input" type="mail" name="user" id="user"></input>
+                <label for="fdn" > Fecha de nacimiento: </label>
+                <input class="form-login input" type="date" name="fdn" id="fdn"></input>                
+                <label for="psw" > Contraseña </label>
+                <input type="password" name="psw" id="psw"></input>
+                <label for="psw2" > Repetir Contraseña: </label>
+                <input type="password" name="psw2" id="psw2"></input>
+                <input type="submit" value="ENVIAR"></input>
+                <input type="reset" value="BORRAR"></input>
+            </form>
+        </div>
+    </main>
 
 </body>
 </html>
