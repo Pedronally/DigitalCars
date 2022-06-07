@@ -101,3 +101,9 @@ font-weight: bold;
     width: 185px;
     height: 235px;
 }
+.prod a{
+    position: relative;
+    top: 150px;
+    left: 500px;
+    border-width: 10px;
+}
