@@ -76,3 +76,14 @@ body{
 h3{
     font-size: 35px;
 }
+.create-form {
+    background-color: #333;
+    text-align: center;
+    position: relative;
+    top: 150px;
+    left: 500px;
+    color: white;
+font-weight: bold;
+    width: 200px;
+    height: 150px;
+}
