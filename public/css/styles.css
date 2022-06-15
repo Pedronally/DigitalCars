@@ -121,6 +121,7 @@ footer{
     font-size: 30px;
     color: #ddd;
     top: 180px;
+    font-weight: bold;
 }
 
 @media (max-width: 480px) {
