@@ -5,41 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/styles.css">
+    <script src="https://kit.fontawesome.com/fe384c9d88.js" crossorigin="anonymous"></script>
     <title>Digital Cars</title>
 </head>
 <header>
-    <img id="Logo" src="/images/Digital_Cars.png" alt="Logo">
-    <nav>
-        <input id="searchbar" type="text" name="search" placeholder="Search car..">
-        <ul class="inicio">
-            <li><a href="#">Productos</a></li>
-            <li><a href="#">Servicios</a></li>
-            <li><a href="#">Nosotros</a></li>
-            <li><a href="#">Contacto</a></li>
-            <li><a href="#">Crea tu cuenta</a></li>
-        </ul>
-    </nav>
+    <div class="topnav">
+        <img class="Logo" src="/images/logo.png" alt="Logo Digital Cars">
+        <a class="active" href="/index">Inicio</a>
+        <a href="#productos">Productos</a>
+        <a href="#contacto">Contacto</a>
+        <a href="#about">Sobre nosotros</a>
+        <a href="/carrito"> <i class="fa-solid fa-cart-shopping"></i> </a>
+        <a href="/login"> <i class="fa-solid fa-user"></i> </a>
+        <a href="/register"> <i class="fa-solid fa-id-card"></i></a>
+    </div>
 </header>
 <body>
 <section class="productos">
     <article>
-        <img class="Producto" src="/images/producto a.jpg" alt="Producto A">
-        <h3>Título del producto</h3>
+        <img src="/images/producto a.jpg" alt="Producto A">
+        <a href="/detalleDeProducto"> <h3> BMW X6 M </h3> </a>
+        <a href="/carrito"><button type="submit">AGREGAR AL CARRITO</button> </a>
+        <button type="submit">COMPRAR</button>
         <p>Bajada del producto</p>
-        <a href="#">ver más</a>
     </article>
     <article>
-        <img class="Producto" src="/images/producto b.jpg" alt="Producto B">
-        <h3>Título del producto</h3>
+        <img src="/images/producto b.jpg" alt="Producto B" width="320px" height="200px">
+        <a href="/detalleDeProducto"> <h3> BMW 328 i </h3> </a>
+        <a href="/carrito"><button type="submit">AGREGAR AL CARRITO</button> </a>
+        <button type="submit">COMPRAR</button>
         <p>Bajada del producto</p>
-        <a href="#">ver más</a>
     </article>
     <article>
-        <img class="Producto" src="/images/producto c.jpg" alt="Producto C">
-        <h3>Título del producto</h3>
+        <img src="/images/producto c.jpg" alt="Producto C">
+        <a href="/detalleDeProducto"> <h3> BMW 240 M </h3> </a>
+        <a href="/carrito"><button type="submit">AGREGAR AL CARRITO</button> </a>
+        <button type="submit">COMPRAR</button>
         <p>Bajada del producto</p>
-        <a href="#">ver más</a>
     </article>
 </section>
+<footer>
+
+</footer>
 </body>
 </html>

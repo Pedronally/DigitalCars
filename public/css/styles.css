@@ -1,34 +1,109 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
 .topnav {
     background-color: #333;
+    height: 135px;
+    width: 100%;
+    
+}
+.Logo{
+    width: 135px;
+    position: relative;
+    left: 10px;
 }
 .topnav a {
     color: #f2f2f2;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+    position: relative;
+    bottom: 20px;
+    left: 40px;
 }
 .topnav a:hover {
     background-color: #ddd;
     color: black;
     transition-property: background-color, color;
-    transition-duration: 1s;
+    transition-duration: 1s;   
 }
 .topnav a.active {
     background-color: #04AA6D;
     color: white;
 }
 body{
-    background-image: url(/images/logo.jpg);
+    background-image: url(/images/FONDO.jpg);
     background-attachment: fixed;
     background-position: center;
     background-size:cover;
 }
 .productos{
     position: relative;
-    top: 50px;
+    top: 200px;
     display: flex;
     flex-wrap: wrap;
     text-align: center;
     color: #ddd;
     justify-content: space-around;
+}
+.productos #titulo {
+    font-weight: bold;
+}
+.topnav #carrito {
+    position: relative;
+    left: 40px;
+}
+.ModeloA {
+    position: relative;
+ text-align: center;
+ top: 130px;
+ box-sizing: border-box;
+ border: #333;
+
+}
+.ModeloA p{
+    background-color: #333;
+    box-sizing: border-box;
+    font-weight: 700;
+    font-size: 30px;
+    position: relative;
+    top: 80px;
+    bottom: 10px;
+    text-align: center;
+}
+h3{
+    font-size: 35px;
+}
+.create-form {
+    background-color: #333;
+    text-align: center;
+    position: relative;
+    top: 150px;
+    left: 500px;
+    color: white;
+font-weight: bold;
+    width: 200px;
+    height: 150px;
+}
+
+.create-formu {
+    display: flex;
+    flex-direction: column;
+    background-color: #333;
+    color: white;
+ font-weight: bold;
+    text-align: center;
+    position: relative;
+    top: 140px;
+    left: 500px;
+    width: 185px;
+    height: 235px;
+}
+.prod a{
+    position: relative;
+    top: 150px;
+    left: 500px;
+    border-width: 10px;
 }
