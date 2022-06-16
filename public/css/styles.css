@@ -64,13 +64,13 @@ body{
 
 }
 .ModeloA p{
-    background-color: #333;
     box-sizing: border-box;
-    font-weight: 700;
-    font-size: 30px;
+    font-weight: bold;
+    font-size: 15px;
     position: relative;
-    top: 80px;
+    top: 40px;
     bottom: 10px;
+    font-size: 35px;
     text-align: center;
 }
 h3{
