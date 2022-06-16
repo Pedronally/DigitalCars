@@ -72,6 +72,7 @@ body{
     bottom: 10px;
     font-size: 35px;
     text-align: center;
+    background-color: gray;
 }
 h3{
     font-size: 35px;
@@ -81,7 +82,7 @@ h3{
     text-align: center;
     position: relative;
     top: 150px;
-    left: 500px;
+    left: 570px;
     color: white;
 font-weight: bold;
     width: 200px;
@@ -97,7 +98,7 @@ font-weight: bold;
     text-align: center;
     position: relative;
     top: 140px;
-    left: 500px;
+    left: 580px;
     width: 185px;
     height: 235px;
 }
