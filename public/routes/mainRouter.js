@@ -3,7 +3,7 @@ const controller = require('../controllers/menuController');
 
 const router = express.Router();
 
-router.get('/index', controller.index);
+router.get('/', controller.index);
 router.get('/login', controller.login);
 router.get('/register', controller.register);
 router.get('/carrito', controller.carrito);
