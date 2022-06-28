@@ -1,13 +1,18 @@
 const express = require("express");
+const app = express();
 const router = require('./public/routes/mainRouter');
 const path = require("path");
-const app = express();
 
-app.set('view engine', 'ejs');
 
 app.use(express.static('public'));
 
-app.use('/index',router);
+
+app.set('view engine', 'ejs');
+
+app.set('views',path.join(__dirname, './views'));
+
+
+app.use('/',router);
 
 
 

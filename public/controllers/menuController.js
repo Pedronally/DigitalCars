@@ -2,19 +2,19 @@ const path = require("path");
 
 const controlador = {
     index: (req, res) => {
-        res.sendFile(path.join(__dirname, './views/index.html'))
+        res.render('../views/index.ejs');
     },
     login: (req, res) => {
-        res.sendFile(path.join(__dirname, './views/login.html'))
+        res.render('../views/login.ejs');
     },
     register: (req, res) => {
-        res.sendFile(path.join(__dirname, './views/register.html'))
+        res.render('../views/register.ejs');
     },
     carrito: (req, res) => {
-        res.sendFile(path.join(__dirname, './views/carrito.html'))
+        res.render('../views/carrito.ejs');
     },
     detalle: (req, res) => {
-        res.sendFile(path.join(__dirname, './views/detalleDeProducto.html'))
+        res.render('../views/detalleDeProducto.ejs');
     },
 };
 
