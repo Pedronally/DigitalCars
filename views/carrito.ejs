@@ -9,19 +9,10 @@
     <title>Digital Cars</title>
 </head>
 <body>
-    <header>
-        <div class="topnav">
-            <img class="Logo" src="/images/logo.png" alt="Logo Digital Cars">
-            <a class="active" href="/index">Inicio</a>
-            <a href="#productos">Productos</a>
-            <a href="#contacto">Contacto</a>
-            <a href="#about">Sobre nosotros</a>
-            <a href="/carrito"> <i class="fa-solid fa-cart-shopping"></i> </a>
-            <a href="/login"> <i class="fa-solid fa-user"></i> </a>
-            <a href="/register"> <i class="fa-solid fa-id-card"></i></a>
-        </div>
-    </header>
-    <div class="productoA"> 
+
+    <%- include('./partials/header.ejs') %> 
+    
+<div class="productoA"> 
     <a href="producto b"><img src="/images/producto b.jpg" alt="Producto B" width="400px" height="250px"></a>
         <a href="/detalleDeProducto"> <h3>  BMW 328 i </h3> </a>
         <p>Método de pago preferido:</p>
