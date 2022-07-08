@@ -14,10 +14,11 @@ const controlador = {
         res.render('../views/carrito.ejs');
     },
     detalle: (req, res) => {
-        res.render('../views/detalleDeProducto.ejs');
-
-       
+        res.render('../views/detalleDeProducto.ejs'); 
     },
-};
+    crear: (req, res) => {
+        res.render('../views/crearProducto.ejs') 
+    }
+}
 
 module.exports = controlador;

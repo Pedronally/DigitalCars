@@ -134,6 +134,19 @@ footer{
     left: 450px;
 }
 
+.creaProductos {
+    position: relative;
+    text-align: center;
+    top: 300px;
+    font-size: 20px;
+    background-color: #333;
+}
+
+
+
+
+
+
 @media (max-width: 480px) {
     .Logo{
         width: 20%;
