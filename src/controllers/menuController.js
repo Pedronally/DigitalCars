@@ -18,6 +18,9 @@ const controlador = {
     },
     crear: (req, res) => {
         res.render('../views/crearProducto.ejs') 
+    },
+    about: (req, res) => {
+        res.render('../views/about.ejs')
     }
 }
 
