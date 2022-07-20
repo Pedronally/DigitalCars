@@ -1,0 +1,32 @@
+[
+    {
+        "modelo":"X6",
+        "precio":"100000",
+        "color":"Azul",
+        "motor":"2.0"
+    },
+    {
+        "modelo":"320i",
+        "precio":"50000",
+        "color":"Negro",
+        "motor":"1.8"
+    },
+    {
+        "modelo":"M4",
+        "precio":"75000",
+        "color":"Rojo",
+        "motor":"2.0"
+    },
+    {
+        "modelo":"M3",
+        "precio":"60000",
+        "color":"Blanco",
+        "motor":"1.8"
+    },
+    {
+        "modelo":"240M",
+        "precio":"45000",
+        "color":"Gris",
+        "motor":"2.0"
+    }
+]

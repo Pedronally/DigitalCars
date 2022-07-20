@@ -1,0 +1,42 @@
+[
+    {
+        "id":"1",
+        "ayn":"Franco Vernego",
+        "fdn":"01/01/1990",
+        "mail":"fvernego@gmail.com",
+        "password":"1234",
+        "tipodeusuario":"1"
+    },
+    {
+        "id":"1",
+        "ayn":"Pedro Nally",
+        "fdn":"01/01/1990",
+        "mail":"pnally@gmail.com",
+        "password":"1234",
+        "tipodeusuario":"1"
+    },
+    {
+        "id":"1",
+        "ayn":"Juan Peralta Pino",
+        "fdn":"01/01/1990",
+        "mail":"jpino@gmail.com",
+        "password":"1234",
+        "tipodeusuario":"1"
+    },
+    {
+        "id":"1",
+        "ayn":"Mateo Panosyan",
+        "fdn":"01/01/1990",
+        "mail":"mpanosyan@gmail.com",
+        "password":"1234",
+        "tipodeusuario":"1"
+    },
+    {
+        "id":"1",
+        "ayn":"Matias Brewda",
+        "fdn":"01/01/1990",
+        "mail":"mbrewda@gmail.com",
+        "password":"1234",
+        "tipodeusuario":"1"
+    }
+]
