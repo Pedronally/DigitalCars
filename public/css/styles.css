@@ -6,8 +6,7 @@
 .topnav {
     background-color: #333;
     height: 135px;
-    width: 100%;
-    
+    width: 100%;   
 }
 .Logo{
     width: 135px;
@@ -41,12 +40,16 @@ body{
 }
 .productos{
     position: relative;
-    top: 200px;
+    top: 180px;
+    bottom: 200px;
     display: flex;
     flex-wrap: wrap;
     text-align: center;
     color: #ddd;
     justify-content: space-around;
+    background-color: #333;
+    height: 250px;
+    padding: 30px;
 }
 .productos #titulo {
     font-weight: bold;
@@ -64,24 +67,26 @@ body{
 
 }
 .ModeloA p{
-    background-color: #333;
     box-sizing: border-box;
-    font-weight: 700;
-    font-size: 30px;
+    font-weight: bold;
+    font-size: 15px;
     position: relative;
-    top: 80px;
+    top: 40px;
     bottom: 10px;
+    font-size: 35px;
     text-align: center;
+    background-color: gray;
 }
 h3{
     font-size: 35px;
+    color: black;
 }
 .create-form {
     background-color: #333;
     text-align: center;
     position: relative;
     top: 150px;
-    left: 500px;
+    left: 570px;
     color: white;
 font-weight: bold;
     width: 200px;
@@ -97,7 +102,7 @@ font-weight: bold;
     text-align: center;
     position: relative;
     top: 140px;
-    left: 500px;
+    left: 580px;
     width: 185px;
     height: 235px;
 }
@@ -122,7 +127,30 @@ footer{
     color: #ddd;
     top: 180px;
     font-weight: bold;
+    background-color: #333;
+    padding: 30px;
+    width: 400px;
+    left: 450px;
 }
+
+.creaProductos {
+    font-size: 20px;
+    position: relative;
+    top: 40px;
+    text-align: center;
+}
+
+.texto1 {
+    font-size: 30px;
+    background-color: #333;
+    text-align: center;
+    position: relative;
+    top: 250px;
+    font-weight: bold;
+}
+
+
+
 
 @media (max-width: 480px) {
     .Logo{

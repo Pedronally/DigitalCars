@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="https://kit.fontawesome.com/fe384c9d88.js" crossorigin="anonymous"></script>
+    <title>Digital Cars</title>
+</head>
+<%- include('./partials/header.ejs') %> 
+
+<body>
+    <form action="creaProductos" class="creaProductos">
+        <div class="create-form">Crea tu producto
+            <form  method="POST" enctype="multipart/form-data" >
+                <div class="form-group">
+                    <input type="text" class="form-control" name="nombre" placeholder="Nombre" required="required" value="">
+                </div>	
+                <div class="form-group">
+                    <input type="text" class="form-control" name="descripcion" placeholder="Descripción" required="required" value="">
+                </div>
+                <div class="form-group">
+                    <input type="number" class="form-control" name="precio" placeholder="Precio" required="required" value="">
+                </div>
+                <div class="form-group">
+                    <input type="color" class="form-control" name="color" placeholder="Color" required="required" value="">
+                </div>
+               
+
+    </form>
+</body>
+
+
+
+
+
+
+
+
+
+</html>
