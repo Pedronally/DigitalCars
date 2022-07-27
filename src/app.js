@@ -3,6 +3,7 @@ const app = express();
 const router = require('./routes/mainRouter');
 const path = require("path");
 
+app.use(express.urlencoded({ extended: false }));
 
 app.use(express.static('public'));
 

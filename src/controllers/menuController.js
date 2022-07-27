@@ -2,7 +2,7 @@ const path = require("path");
 
 const controlador = {
     index: (req, res) => {
-         res.render('../views/index.ejs');
+        res.render('../views/index.ejs');
     },
     login: (req, res) => {
         res.render('../views/login.ejs');
@@ -18,6 +18,11 @@ const controlador = {
     },
     crear: (req, res) => {
         res.render('../views/crearProducto.ejs') 
+    },
+    guardar: (req,res) => {
+        let producto = req.body
+        console.log(producto)
+        res.send(producto)
     },
     about: (req, res) => {
         res.render('../views/about.ejs')

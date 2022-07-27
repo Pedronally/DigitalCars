@@ -11,9 +11,8 @@
 <%- include('./partials/header.ejs') %> 
 
 <body>
-    <form action="creaProductos" class="creaProductos">
-        <div class="create-form">Crea tu producto
-            <form  method="POST" enctype="multipart/form-data" >
+        <div class="create-form">Crea tu producto</div>
+            <form  method="POST" action="/crear">
                 <div class="form-group">
                     <input type="text" class="form-control" name="nombre" placeholder="Nombre" required="required" value="">
                 </div>	
@@ -26,8 +25,7 @@
                 <div class="form-group">
                     <input type="color" class="form-control" name="color" placeholder="Color" required="required" value="">
                 </div>
-               
-
+            <button type="submit">Guardar</button>
     </form>
 </body>
 
