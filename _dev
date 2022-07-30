@@ -1,0 +1,5 @@
+
+> src@1.0.0 start /Users/pablodominguez/Desktop/Proyecto_INT_DH/grupo_2_DigitalCars
+> node ./src/app.js
+
+APP RUNNING AND LISTENING ON PORT 3050
