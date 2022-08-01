@@ -87,7 +87,7 @@ router.put('/products/:productId', async (req, res) => {
         var newData = JSON.stringify(editJsonProducts);
         fs.writeFile(__dirname + '/../../data/productos.json', newData, err => {
             if (err) return res.status(500).send(`Interanal server error ${err.message}`)
-            res.status(200).send("New data added");
+            res.status(200).send("Data updated");
         });
     } catch (err) {
         console.error(err)

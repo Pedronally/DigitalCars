@@ -5,6 +5,10 @@ const userRoutes = require('./api/users.routes')
 
 const router = express.Router()
 
+router.get('/ping', async(req, res) => {
+    res.send('Pong')
+})
+
 router.use('/', viewRoutes)
 .use('/api', productRoutes)
 .use('/api', userRoutes)

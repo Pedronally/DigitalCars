@@ -1,42 +1,58 @@
 [
     {
-        "id":"1",
-        "ayn":"Franco Vernego",
-        "fdn":"01/01/1990",
-        "mail":"fvernego@gmail.com",
-        "password":"1234",
-        "tipodeusuario":"1"
+        "id": "1",
+        "ayn": "Franco Vernego",
+        "fdn": "01/01/1990",
+        "mail": "fvernego@gmail.com",
+        "password": "1234",
+        "tipodeusuario": "1"
     },
     {
-        "id":"1",
-        "ayn":"Pedro Nally",
-        "fdn":"01/01/1990",
-        "mail":"pnally@gmail.com",
-        "password":"1234",
-        "tipodeusuario":"1"
+        "id": "1",
+        "ayn": "Pedro Nally",
+        "fdn": "01/01/1990",
+        "mail": "pnally@gmail.com",
+        "password": "1234",
+        "tipodeusuario": "1"
     },
     {
-        "id":"1",
-        "ayn":"Juan Peralta Pino",
-        "fdn":"01/01/1990",
-        "mail":"jpino@gmail.com",
-        "password":"1234",
-        "tipodeusuario":"1"
+        "id": "1",
+        "ayn": "Juan Peralta Pino",
+        "fdn": "01/01/1990",
+        "mail": "jpino@gmail.com",
+        "password": "1234",
+        "tipodeusuario": "1"
     },
     {
-        "id":"1",
-        "ayn":"Mateo Panosyan",
-        "fdn":"01/01/1990",
-        "mail":"mpanosyan@gmail.com",
-        "password":"1234",
-        "tipodeusuario":"1"
+        "id": "1",
+        "ayn": "Mateo Panosyan",
+        "fdn": "01/01/1990",
+        "mail": "mpanosyan@gmail.com",
+        "password": "1234",
+        "tipodeusuario": "1"
     },
     {
-        "id":"1",
-        "ayn":"Matias Brewda",
-        "fdn":"01/01/1990",
-        "mail":"mbrewda@gmail.com",
-        "password":"1234",
-        "tipodeusuario":"1"
+        "id": "1",
+        "ayn": "Matias Brewda",
+        "fdn": "01/01/1990",
+        "mail": "mbrewda@gmail.com",
+        "password": "1234",
+        "tipodeusuario": "1"
+    },
+    {
+        "id": "4040c40a-389a-4e87-9422-b46eec80f792",
+        "ayn": "Pablo Dominguez",
+        "fdn": "07-02-1998",
+        "mail": "dominguezpablo@gmail.com",
+        "password": "$2b$10$OGpK43C2PEqOv1k8iDLPYe6fn9K.bTTN/7m0TfT9NC4bBxpTpJyQa",
+        "tipodeusuario": "1"
+    },
+    {
+        "id": "43b5a1ca-7b08-49f1-9d93-0a4b12321e11",
+        "ayn": "Juan Peralta",
+        "fdn": "2022-07-06",
+        "mail": "juampi@gmail.com",
+        "password": "$2b$10$HzgV5FN55yHHKYe2kgtISOOhNGU6R65xgymoYp2XMyGed4UGGiKaC",
+        "tipodeusuario": "1"
     }
 ]

@@ -1,32 +1,44 @@
 [
     {
-        "modelo":"X6",
-        "precio":"100000",
-        "color":"Azul",
-        "motor":"2.0"
+        "id": "1",
+        "modelo": "X6",
+        "precio": "100000",
+        "color": "Verde",
+        "motor": "2.0"
     },
     {
-        "modelo":"320i",
-        "precio":"50000",
-        "color":"Negro",
-        "motor":"1.8"
+        "id": 2,
+        "modelo": "320i",
+        "precio": "50000",
+        "color": "Negro",
+        "motor": "1.8"
     },
     {
-        "modelo":"M4",
-        "precio":"75000",
-        "color":"Rojo",
-        "motor":"2.0"
+        "id": 3,
+        "modelo": "M4",
+        "precio": "75000",
+        "color": "Rojo",
+        "motor": "2.0"
     },
     {
-        "modelo":"M3",
-        "precio":"60000",
-        "color":"Blanco",
-        "motor":"1.8"
+        "id": 4,
+        "modelo": "M3",
+        "precio": "60000",
+        "color": "Blanco",
+        "motor": "1.8"
     },
     {
-        "modelo":"240M",
-        "precio":"45000",
-        "color":"Gris",
-        "motor":"2.0"
+        "id": 5,
+        "modelo": "240M",
+        "precio": "45000",
+        "color": "Gris",
+        "motor": "2.0"
+    },
+    {
+        "modelo": "M18",
+        "motor": "2.4",
+        "precio": "21321321",
+        "color": "Gris",
+        "id": "87e31991-ee3a-49a5-8c8e-3f50534883ef"
     }
 ]
