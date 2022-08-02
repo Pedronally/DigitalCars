@@ -11,10 +11,10 @@
 <body>
     
         <%- include('./partials/header.ejs') %> 
-
+        
     <main>
         <div class="create-form">
-        <form class="form-login" method="POST">
+        <form class="form-login" method="POST" action="/api/users">
             <legend>Inicia Sesion</legend>
             <label for="user" >Email: </label>
             <input class="form-login input" type="mail" name="user" id="user"></input>
