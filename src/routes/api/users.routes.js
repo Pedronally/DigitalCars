@@ -70,12 +70,17 @@ router.post('/users', upload.single('avatarFiles'), validateRegister, async (req
 
 router.post('/login', async (req, res) =>{
     try{
-        const { body } = req
-        jsonUsers.forEach(function(body) {
-            if (body.mail == jsonUsers.email) {
-                res.status(200).send("Logged");
-            }
+        let loggeado = await jsonUsers.find(usuario => {
+            console.log(usuario.mail == req.body.user)
+            return usuario.mail == req.body.user            
         })
+        console.log(loggeado)
+        if(loggeado){
+            return res.status(200).render("/index.ejs")
+        }
+        else{
+            throw new Error('No se encontro el Usuario')
+        }
     } catch(err){
         console.error(err)
         res.status(500).json(`Internal server error: ${err.message}`)

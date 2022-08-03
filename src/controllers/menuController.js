@@ -1,12 +1,24 @@
+const { body } = require("express-validator");
 const path = require("path");
+const fs = require('fs');
 const { getProduct } = require('../services/products.service')
+const { getUsers } = require('../services/users.service')
+var data = fs.readFileSync(__dirname + '/../data/users.json');
+
+const jsonUsers = JSON.parse(data)
 
 const controlador = {
     index: (req, res) => {
         res.render('../views/index.ejs');
     },
     login: (req, res) => {
+
         res.render('../views/login.ejs');
+
+        const { userMail } = req.body
+        if (userMail.email == jsonUsers.email) {
+            return res.render('../views/index.ejs')
+        } 
     },
     register: (req, res) => {
         res.render('../views/register.ejs');
