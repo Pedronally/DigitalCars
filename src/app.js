@@ -1,11 +1,13 @@
 const express = require("express");
 const app = express();
 const router = require('./routes/mainRouter');
-const indexRouter = require('./routes/index')
+const indexRouter = require('./routes/index');
 const path = require("path");
-const logger = require('morgan')
-const methodOverride = require('method-override')
+const logger = require('morgan');
+const methodOverride = require('method-override');
 const userRouter = require('./routes/userRouter');
+const adminRouter = require('./routes/adminRouter');
+const productRouter = require('./routes/productRouter');
 
 
 
@@ -22,6 +24,11 @@ app.use('/', router)
 app.use('/', indexRouter)
 
 app.use('/user', userRouter)
+
+app.use('/admin', adminRouter)
+
+app.use('/productos', productRouter)
+
 
 app.use(express.static('public'));
 

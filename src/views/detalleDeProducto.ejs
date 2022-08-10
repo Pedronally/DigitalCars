@@ -11,15 +11,19 @@
 <body>
             
             <%- include('./partials/header.ejs') %> 
-   
-     <main>
+    <main>
         <div class="ModeloA"> <a id="foto"> <img src="/images/producto b.jpg" alt="Producto B" height="350px"
             width="600px"> </a>
-            <a href="/detalleDeProducto"> <h3> BMW 328 i </h3> </a> 
-            <p>-Este es un auto que brinda a las dos necesidades basicas, confort y velocidad.  
+            <a href="/detalleDeProducto"> <h3> BMW <%= auto.modelo %> </h3> </a> 
+            <!-- <p>-Este es un auto que brinda a las dos necesidades basicas, confort y velocidad.  
                 El nuevo modelo 2023 tiene un aspecto un poco mas agresivo, con nuevas partes detalladas en fibra de carbono 
                 para ayudar a alivianar en auto para dar probecho a sus 340cv.
                 Su precio ronda los 2 bitcoins, aproximadamente.
+            </p>
+            -->
+            <p>
+                El BMW <%= auto.modelo %> tiene un valor de <%= auto.precio %> USD. Cuenta con un motor de
+                <%= auto.motor %> y viene en color <%= auto.color %>
             </p>    
         </div>    
     </main>
