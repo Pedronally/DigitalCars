@@ -5,6 +5,9 @@ const indexRouter = require('./routes/index')
 const path = require("path");
 const logger = require('morgan')
 const methodOverride = require('method-override')
+const userRouter = require('./routes/userRouter');
+
+
 
 app.use(logger('dev'))
 
@@ -17,6 +20,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use('/', router)
 
 app.use('/', indexRouter)
+
+app.use('/user', userRouter)
 
 app.use(express.static('public'));
 
