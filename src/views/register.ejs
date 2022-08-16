@@ -14,18 +14,19 @@
 
     <main>
         <div class="create-formu">
-            <form class="form-registro" method="POST">
+            <form class="form-registro" method="POST" enctype="multipart/form-data" action="/api/users">
                 <legend>Registrate</legend>
                 <label for="name" > Nombre y Apellido: </label>
-                <input class="form-login input" type="text" name="name" id="name"></input>
+                <input class="form-login input" type="text" name="completeName" id="name"></input>
                 <label for="user" > Email: </label>
-                <input class="form-login input" type="mail" name="user" id="user"></input>
+                <input class="form-login input" type="mail" name="email" id="user"></input>
                 <label for="fdn" > Fecha de nacimiento: </label>
-                <input class="form-login input" type="date" name="fdn" id="fdn"></input>                
+                <input class="form-login input" type="date" name="birthdate" id="fdn"></input>                
                 <label for="psw" > Contraseña </label>
-                <input type="password" name="psw" id="psw"></input>
+                <input type="password" name="password" id="psw"></input>
                 <label for="psw2" > Repetir Contraseña: </label>
                 <input type="password" name="psw2" id="psw2"></input>
+                <input type="file" name="avatarFiles" id="file" multiple>
                 <input type="submit" value="ENVIAR"></input>
                 <input type="reset" value="BORRAR"></input>
             </form>

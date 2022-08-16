@@ -149,7 +149,17 @@ footer{
     font-weight: bold;
 }
 
+#formulando {
+    
+    font: 100;
+    font-weight: bold;
+    position: relative;
+    top: 40px;
+    right: 13px;
+    text-align: center;
 
+    width: auto;
+}
 
 
 @media (max-width: 480px) {
