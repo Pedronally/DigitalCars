@@ -17,11 +17,11 @@
             <form class="form-registro" method="POST" enctype="multipart/form-data" action="/api/users">
                 <legend>Registrate</legend>
                 <label for="name" > Nombre y Apellido: </label>
-                <input class="form-login input" type="text" name="completeName" id="name"></input>
+                <input class="name" type="text" name="completeName" id="name"></input>
                 <label for="user" > Email: </label>
-                <input class="form-login input" type="mail" name="email" id="user"></input>
+                <input class="mail" type="mail" name="email" id="user"></input>
                 <label for="fdn" > Fecha de nacimiento: </label>
-                <input class="form-login input" type="date" name="birthdate" id="fdn"></input>                
+                <input class="date" type="date" name="birthdate" id="fdn"></input>                
                 <label for="psw" > Contraseña </label>
                 <input type="password" name="password" id="psw"></input>
                 <label for="psw2" > Repetir Contraseña: </label>
@@ -35,5 +35,7 @@
 </body>
 
     <%- include('./partials/footer.ejs') %> 
+
+    <script src="./partials/script.js"></script>
 
 </html>

@@ -1,7 +1,7 @@
 const path = require("path");
 const fs = require('fs');
 const productArchivo = fs.readFileSync (path.join(__dirname, '../data/productos.json'))
-
+let db = require("../database/models");
 
 const controller = {
 
@@ -15,19 +15,17 @@ const controller = {
         res.render('editarProducto', {auto})
     },
     saveNew: (req, res) => {
-        const products = JSON.parse(productArchivo)
-        const ultimoAuto = products.pop()
-        let autoNuevo = {
-            id: ultimoAuto.id +1,
+        db.Auto.create({
             modelo: req.body.modelo,
             precio: req.body.precio,
-            color: req.body.color,
-            motor: req.body.motor,
-        } 
-        products.push(autoNuevo)
-        const nuevoJson = JSON.stringify(products)
-        fs.writeFileSync (path.join(__dirname, '../data/productos.json'), nuevoJson)
-        res.render('crearProducto')
+            id_color: req.body.color,
+            anio: req.body.anio,
+        })
+        .then(()=> {
+            res.render('crearProducto')
+        })
+         
+        
     },
     saveEdit: (req, res) => {
         res.render('crearProducto')

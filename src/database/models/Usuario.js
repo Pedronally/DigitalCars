@@ -38,5 +38,5 @@ module.exports = (sequelize, dataTypes) => {
             foreignKey:"id_usuario"
         })
     }
-    return Usuario
+    return Usuario;
 }

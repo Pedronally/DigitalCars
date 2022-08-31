@@ -33,5 +33,5 @@ module.exports = (sequelize, dataTypes) => {
         })
 
     }
-    return Usuario
+    return Venta;
 }

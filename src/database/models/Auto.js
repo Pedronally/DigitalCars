@@ -23,7 +23,9 @@ module.exports = (sequelize, dataTypes) => {
         
     };
     let config = {
-            
+            tableName : "autos",
+            timestamps: false
+ 
     }
     const Auto = sequelize.define(alias, cols, config)
 
@@ -37,4 +39,5 @@ module.exports = (sequelize, dataTypes) => {
             foreignKey:"id_auto"
         })
     }
+    return Auto;
 }
