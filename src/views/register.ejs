@@ -14,7 +14,7 @@
 
     <main>
         <div class="create-formu">
-            <form class="form-registro" method="POST" enctype="multipart/form-data" action="/api/users">
+            <form class="form-registro" method="POST"  action="/user/register">
                 <legend>Registrate</legend>
                 <label for="name" > Nombre y Apellido: </label>
                 <input class="name" type="text" name="completeName" id="name"></input>
@@ -25,8 +25,8 @@
                 <label for="psw" > Contraseña </label>
                 <input type="password" name="password" id="psw"></input>
                 <label for="psw2" > Repetir Contraseña: </label>
-                <input type="password" name="psw2" id="psw2"></input>
-                <input type="file" name="avatarFiles" id="file" multiple>
+                
+                <!--<input type="file" name="avatarFiles" id="file" multiple>-->
                 <input type="submit" value="ENVIAR"></input>
                 <input type="reset" value="BORRAR"></input>
             </form>

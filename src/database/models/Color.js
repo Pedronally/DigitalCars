@@ -14,13 +14,15 @@ module.exports = (sequelize, dataTypes) => {
         },
     }
     let config = {
+        tableName : "colores",
+            timestamps: false
        
     }
     const Color = sequelize.define(alias,cols,config);
     Color.associate = function(models){
         Color.hasMany(models.Auto, {
             as: "autos",
-            foreignKey:"id_color"
+            foreignKey:"color_id"
         })
     }
     return Color;

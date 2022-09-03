@@ -6,7 +6,12 @@ let db = require("../database/models");
 const controller = {
 
     createProduct: (req, res) => {
-        res.render('crearProducto')
+        db.Color.findAll()
+        .then(colores=> {
+            
+            res.render('crearProducto', {colores})
+        })
+        
     },
     editProduct: (req, res) => {
         const products = JSON.parse(productArchivo)
@@ -15,14 +20,16 @@ const controller = {
         res.render('editarProducto', {auto})
     },
     saveNew: (req, res) => {
+        console.log("id:")
+        console.log(req.body)
         db.Auto.create({
             modelo: req.body.modelo,
             precio: req.body.precio,
-            id_color: req.body.color,
+            color_id: req.body.color,
             anio: req.body.anio,
         })
         .then(()=> {
-            res.render('crearProducto')
+            res.render('index')
         })
          
         

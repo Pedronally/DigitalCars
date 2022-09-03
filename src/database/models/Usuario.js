@@ -7,36 +7,38 @@ module.exports = (sequelize, dataTypes) => {
             autoIncrement: true
         },
         nombre: {
-            type: dataTypes.STRING(100),
+            type: dataTypes.STRING(255),
             allowNull: false
         },
-        mail: {
-            type: dataTypes.STRING(100),
+        email: {
+            type: dataTypes.STRING(255),
             allowNull: false
         },
-        contraseña: {
-            type: dataTypes.STRING(100),
+        contrasenia: {
+            type: dataTypes.STRING(255),
             allowNull: false
         },
         fdn: {
-            type: dataTypes.DATEONLY,
+            type: dataTypes.DATE,
             allowNull: false
-        },
-        id_rol:  dataTypes.BIGINT(10)
+        }
     };
     let config = {
-
+        tableName : "usuarios",
+            timestamps: false
+       
     }
     const Usuario = sequelize.define(alias,cols, config);
     Usuario.associate = function(models){
         Usuario.belongsTo(models.Rol, {
-            as : "rol",
-            foreignKey:"id_rol"
+            as : "roles",
+            foreignKey:"rol_id"
         })
-        Usuario.hasMany(models.Venta, {
+        /*Usuario.hasMany(models.Venta, {
             as: "ventas",
             foreignKey:"id_usuario"
         })
+    */
     }
     return Usuario;
 }

@@ -15,7 +15,7 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.BIGINT(10).UNSIGNED,
             allowNull: false
         },
-        id_color: dataTypes.BIGINT(10),
+        
         anio: {
             type: dataTypes.BIGINT(4).UNSIGNED,
             allowNull: false
@@ -31,8 +31,8 @@ module.exports = (sequelize, dataTypes) => {
 
     Auto.associate = function(models){
         Auto.belongsTo(models.Color, {
-            as: 'color',
-            foreignKey:'id_color'
+            as: 'colores',
+            foreignKey:'color_id'
         })
         Auto.hasMany(models.Venta,{
             as:"ventas",
