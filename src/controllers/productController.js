@@ -1,14 +1,16 @@
 const path = require("path");
 const fs = require('fs');
+const db = require("../database/models");
 const productArchivo = fs.readFileSync (path.join(__dirname, '../data/productos.json'))
 
 const controller = {
     list: (req, res) => {
-        const products = JSON.parse(productArchivo)
-        res.render('productos', {
-            products
-        }
-        )
+        db.Auto.findAll()
+        .then(products=> {
+            
+            res.render('productos', {products})
+        })
+        
     }, 
     detalle: (req, res) => {
         const products = JSON.parse(productArchivo)

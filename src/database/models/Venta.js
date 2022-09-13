@@ -19,7 +19,8 @@ module.exports = (sequelize, dataTypes) => {
         
     };
     let config = {
-
+        tablestamps: false,
+        tablename: 'venta'
     }
     const Venta = sequelize.define(alias,cols, config);
     Venta.associate = function(models){
