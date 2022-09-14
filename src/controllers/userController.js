@@ -7,7 +7,6 @@ const controller = {
         res.render('login')
     },
     register: (req, res) => {
-
         res.render('register')
     },
     registerConfirm:(req,res)=>{
@@ -22,7 +21,18 @@ const controller = {
             .then(()=>{
                 res.render('index')
             })
-    } 
+    },
+    loginConfirm:(req,res)=>{
+        const user = User.findOne({ where : {email : req.body.email }});
+            if(user){
+                if (req.body.psw == User.contrasenia) {
+                    res.status(200)
+                }
+
+            } else{
+                res.status(404).json({ error : "no existe usuario con el correo introducido" });
+            }
+    }
 
 }
 module.exports = controller

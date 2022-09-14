@@ -1,9 +1,12 @@
 const express = require('express');
 const router = express.Router();
 const userController = require('../controllers/userController');
+const validations = require('../middlewares/validationUser');
+const uploadFile = require("../middlewares/multerMiddlewares");
+
 
 router.get('/login', userController.login)
 router.get('/register', userController.register)
-router.post('/register', userController.registerConfirm)
+router.post('/register',validations , userController.registerConfirm)
 
 module.exports = router;
