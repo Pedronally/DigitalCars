@@ -23,15 +23,23 @@ const controller = {
             })
     },
     loginConfirm:(req,res)=>{
-        const user = User.findOne({ where : {email : req.body.email }});
-            if(user){
-                if (req.body.psw == User.contrasenia) {
-                    res.status(200)
+        
+        db.Usuario.findOne({ where:{email : req.body.user }})
+        .then(user =>{ 
+            console.log(user.contrasenia)
+            if(user.email != ""){
+                if (req.body.psw == user.contrasenia) {
+                    console.log("inicio sesion")
+                    res.redirect("/")
+                }
+                else{
+                    console.log("error")
+                    res.redirect("/login")
                 }
 
-            } else{
-                res.status(404).json({ error : "no existe usuario con el correo introducido" });
-            }
+            } 
+        })
+        
     }
 
 }

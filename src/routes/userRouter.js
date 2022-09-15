@@ -6,6 +6,7 @@ const uploadFile = require("../middlewares/multerMiddlewares");
 
 
 router.get('/login', userController.login)
+router.post('/login', userController.loginConfirm)
 router.get('/register', userController.register)
 router.post('/register',validations , userController.registerConfirm)
 
