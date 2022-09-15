@@ -12,8 +12,8 @@
 <%- include('./partials/header.ejs') %>
 
     <body>
-        <div class="create-form">Edita tu producto</div>
-        <form method="POST" action="/api/products/<%= auto.id %>?_method=PUT">
+        <div class="create-form-edit">Edita tu producto</div>
+        <form class="create-form-edit" method="POST" action="/api/products/<%= auto.id %>?_method=PUT">
             <div class="form-group">
                 <input type="text" class="form-control" name="modelo" placeholder="Modelo" required="required"
                     value="<%= auto.modelo %>">
