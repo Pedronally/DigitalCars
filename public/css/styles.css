@@ -155,7 +155,8 @@ footer{
     top: 125px;
     left: 550px;
     background-color: #333;
-    
+    font-size: 25px;
+    font-weight: bold;
 }
 #formulando {
     
