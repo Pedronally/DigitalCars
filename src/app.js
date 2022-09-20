@@ -8,7 +8,7 @@ const methodOverride = require('method-override');
 const userRouter = require('./routes/userRouter');
 const adminRouter = require('./routes/adminRouter');
 const productRouter = require('./routes/productRouter');
-
+const usersApi = require('./routes/usersApi');
 
 
 app.use(logger('dev'))
@@ -29,6 +29,7 @@ app.use('/admin', adminRouter)
 
 app.use('/productos', productRouter)
 
+app.use('/api/users', usersApi)
 
 app.use(express.static('public'));
 
