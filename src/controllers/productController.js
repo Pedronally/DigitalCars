@@ -23,7 +23,9 @@ const controller = {
     eliminar:(req,res) => {
         console.log(req.params.id_auto)
         db.Auto.destroy({where:{id_auto: req.params.id_auto}})
+        .then(()=>{
         res.redirect('/productos/listado')
+        })
     }
 
 }
