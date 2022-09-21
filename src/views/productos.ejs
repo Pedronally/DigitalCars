@@ -20,12 +20,16 @@
             <a href="/carrito"><button type="submit">AGREGAR AL CARRITO</button> </a>
             <a href="/admin/edit/<%= product.id_auto %>"><button>EDITAR</button> </a>
             <button type="submit">COMPRAR</button>
-            <a href="/productos/eliminar/<%= product.id_auto%>"><button>Eliminar</button></button></a>
+            <form method="POST" action="/productos/eliminar/<%=product.id_auto%>?_method=DELETE"> 
+            <button>Eliminar</button>
+            </form>
         </article>
     <% }) %>
     
 </section>
 </body>
+ 
+    
 
 <%- include('./partials/footer.ejs') %> 
 

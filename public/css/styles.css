@@ -148,7 +148,16 @@ footer{
     top: 250px;
     font-weight: bold;
 }
-
+.create-form-edit {
+    width: 200px;
+    text-align: center;
+    position: relative;
+    top: 125px;
+    left: 550px;
+    background-color: #333;
+    font-size: 25px;
+    font-weight: bold;
+}
 #formulando {
     
     font: 100;
@@ -160,7 +169,9 @@ footer{
 
     width: auto;
 }
-
+.productos{
+    height: fit-content;
+}
 
 @media (max-width: 480px) {
     .Logo{
