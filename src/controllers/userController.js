@@ -1,5 +1,7 @@
 const path = require("path");
 const db = require("../database/models");
+const { validationResult } = require("express-validator")
+
 
 const controller = {
 
@@ -10,7 +12,7 @@ const controller = {
         res.render('register')
     },
     registerConfirm:(req,res)=>{
-        console.log(req.body)
+        
         db.Usuario.create({
             nombre:req.body.completeName,
             email:req.body.email,
