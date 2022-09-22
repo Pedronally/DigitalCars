@@ -38,8 +38,8 @@ window.addEventListener("load", function(){
         }
     })
 
-formularioLogin.addEventListener("submit", function(e){
-    e.preventDefault();
+formularioLogin.addEventListener("submit", function(f){
+    f.preventDefault();
 
     let campoUser = document.querySelector("input.user");
     emailRegex = /^(?:[^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*|"[^\n"]+")@(?:[^<>()[\].,;:\s@"]+\.)+[^<>()[\]\.,;:\s@"]{2,63}$/i;
@@ -56,8 +56,8 @@ formularioLogin.addEventListener("submit", function(e){
     }
 })
 
-formularioCreateEdit.addEventListener("submit", function(e){
-    e.preventDefault();
+formularioCreateEdit.addEventListener("submit", function(g){
+    g.preventDefault();
 
     let campoModelo = document.querySelector("input.modelo");
 
