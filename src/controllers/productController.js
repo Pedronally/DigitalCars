@@ -14,12 +14,11 @@ const controller = {
     }, 
     detalle: (req, res) => {
         //const products = JSON.parse(productArchivo)
-        let auto = db.Auto.findByPk(req.params.id_auto)
-        res.render('detalleDeProducto', {
-            auto
-        }
-        )
-    },
+        console.log(req.params)
+        db.Auto.findByPk(req.params.id,).then(auto=>{
+            console.log(auto)
+        res.render('detalleDeProducto', {auto})
+    })},
     eliminar:(req,res) => {
          db.Auto.destroy({where:{id_auto: req.params.id}})
         res.render('/productos/listado')
