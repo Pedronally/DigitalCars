@@ -9,6 +9,7 @@ const userRouter = require('./routes/userRouter');
 const adminRouter = require('./routes/adminRouter');
 const productRouter = require('./routes/productRouter');
 const usersApi = require('./routes/usersApi');
+const productApi = require('./routes/productApi')
 
 
 app.use(logger('dev'))
@@ -30,6 +31,8 @@ app.use('/admin', adminRouter)
 app.use('/productos', productRouter)
 
 app.use('/api/users', usersApi)
+
+app.use('/api/productos', productApi)
 
 app.use(express.static('public'));
 
