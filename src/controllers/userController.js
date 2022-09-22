@@ -10,7 +10,7 @@ const controller = {
         res.render('register')
     },
     registerConfirm:(req,res)=>{
-        console.log(req.body)
+       if(Usuario)  
         db.Usuario.create({
             nombre:req.body.completeName,
             email:req.body.email,

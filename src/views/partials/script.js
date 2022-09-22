@@ -1,4 +1,4 @@
-const e = require("express");
+
 
 window.addEventListener("load", function(){
 
@@ -48,7 +48,7 @@ formularioLogin.addEventListener("submit", function(e){
     } else if(campoUser.value == ""){
         alert("El campo debe estar completo")
     } 
-
+ 
     let campoPSW = document.querySelector("input.psw");
 
     if(campoPSW.value == ""){
