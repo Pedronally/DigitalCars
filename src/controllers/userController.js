@@ -1,5 +1,7 @@
 const path = require("path");
 const db = require("../database/models");
+const { validationResult } = require("express-validator")
+
 
 const controller = {
 
@@ -10,25 +12,35 @@ const controller = {
         res.render('register')
     },
     registerConfirm:(req,res)=>{
-       
+       const resultValidation = validationResult(req);
+       console.log(resultValidation.errors)
+       console.log(req.body)
+       if(resultValidation.errors.length>0){
+            res.render('register',{errors:resultValidation.mapped()})
+
+        }else{
         db.Usuario.create({
-            nombre:req.body.completeName,
+            nombre:req.body.nombre,
             email:req.body.email,
-            contrasenia:req.body.password,
-            fdn:req.body.birthdate,
+            contrasenia:req.body.contrasenia,
+            fdn:req.body.fdn,
             rol_id:2
                 })
             .then(()=>{
                 res.render('index')
             })
+        }
     },
     loginConfirm:(req,res)=>{
-        
-        db.Usuario.findOne({ where:{email : req.body.user }})
-        .then(user =>{ 
-            console.log(user.contrasenia)
+        const resultValidation = validationResult(req.body);
+        console.log(resultValidation.errors.length)
+        console.log(req.body)
+        //if(resultValidation.errors.length)
+        db.Usuario.findOne({ where:{email : req.body.mail }})
+        .then(user =>{
+            console.log(user)
             if(user.email != ""){
-                if (req.body.psw == user.contrasenia) {
+                if (req.body.contrasenia == user.contrasenia) {
                     console.log("inicio sesion")
                     res.redirect("/")
                 }
@@ -37,7 +49,7 @@ const controller = {
                     res.redirect("/login")
                 }
 
-            } 
+            }
         })
         
     }
