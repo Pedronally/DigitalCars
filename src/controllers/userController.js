@@ -36,7 +36,7 @@ const controller = {
         console.log(resultValidation.errors.length)
         console.log(req.body)
         //if(resultValidation.errors.length)
-        db.Usuario.findOne({ where:{email : req.body.mail }})
+        db.Usuario.findOne({ where:{email : req.body.email }})
         .then(user =>{
             console.log(user)
             if(user.email != ""){
@@ -49,7 +49,10 @@ const controller = {
                     res.redirect("/login")
                 }
 
+            }else{
+                res.redirect('/login')
             }
+            
         })
         
     }

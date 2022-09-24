@@ -14,13 +14,21 @@ const controller = {
         
     },
     editProduct: (req, res) => {
-        const products = JSON.parse(productArchivo)
-        const auto = products.find(auto => auto.id == req.params.id)
-
-        res.render('editarProducto', {auto})
+          db.Color.findAll().then(colores=>{
+            db.Auto.findByPk(req.params.id).then(auto=>{
+            console.log(auto);
+            //db.Color.findByPk({ where:{id_color : auto.color_id }}).then(color=>{
+                
+                res.render('editarProducto', {auto,colores})})
+            //})
+            
+        
+})
+        
+        
     },
     saveNew: (req, res) => {
-        console.log("id:")
+        
         console.log(req.body)
         db.Auto.create({
             modelo: req.body.modelo,
@@ -35,7 +43,15 @@ const controller = {
         
     },
     saveEdit: (req, res) => {
-        res.render('crearProducto')
+        
+        const auto = {
+            modelo: req.body.modelo,
+            precio: req.body.precio,
+            color_id: req.body.color,
+            anio: req.body.anio,
+        }
+        db.Auto.update(auto,{where:{id_auto: req.params.id}})
+        res.redirect('/productos/listado')
     },
 }
 module.exports = controller
