@@ -13,8 +13,8 @@
         <%- include('./partials/header.ejs') %> 
         
     <main>
-        <div class="create-form">
-        <form class="form-login" method="POST" action="/user/login">
+        <div class="create-form-login">
+        <form method="POST" action="/user/login">
             <legend>Inicia Sesion</legend>
             <label for="user" >Email: </label>
             <input class="form-login input" type="mail" name="email" id="email"></input>
@@ -25,6 +25,7 @@
         </form>
         </div>
     </main>
+    <script src="/public/js/login.js"></script>
 </body>
 
 <%- include('./partials/footer.ejs') %> 

@@ -14,7 +14,7 @@
 
     <main>
         <div class="create-formu">
-            <form class="form-registro" method="POST"  action="/user/register">
+            <form  method="POST"  action="/user/register">
                 <legend>Registrate</legend>
                 <label for="name" > Nombre y Apellido: </label>
                 <input class="name" type="text" name="nombre" id="name"></input>
@@ -31,10 +31,11 @@
             </form>
         </div>
     </main>
+    <script src="/public/js/register.js"></script>
 </body>
 
     <%- include('./partials/footer.ejs') %> 
 
-    <script src="./partials/script.js"></script>
+    
 
 </html>
