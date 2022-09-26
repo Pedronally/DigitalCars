@@ -1,6 +1,6 @@
 window.addEventListener("load", function(){
 
-    let formularioCreate = document.querySelector("create-form");
+    let formularioCreate = document.querySelector(".create-form");
 
     formularioCreate.addEventListener("submit", function(e){
         e.preventDefault();

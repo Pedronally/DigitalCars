@@ -1,7 +1,7 @@
 window.addEventListener("load", function(){
     
 
-    let formularioRegister = document.querySelector("create-formu");
+    let formularioRegister = document.querySelector(".create-formu");
 
     formularioRegister.addEventListener("submit", function(e){
         e.preventDefault();
@@ -14,7 +14,7 @@ window.addEventListener("load", function(){
             alert("El nombre debe tener al menos 2 caracteres")
         }
         
-        let campoUser = document.querySelector("input.user");
+        let campoUser = document.querySelector("input.mail");
         emailRegex = /^(?:[^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*|"[^\n"]+")@(?:[^<>()[\].,;:\s@"]+\.)+[^<>()[\]\.,;:\s@"]{2,63}$/i;
         if (!emailRegex.test(campoUser.value)) {
             alert("El email es erroneo")
@@ -24,11 +24,19 @@ window.addEventListener("load", function(){
 
         //Poner validación de Imagen
         
-        let campoPSW = document.querySelector("input.psw");
+        let campoPSW1 = document.querySelector("input.psw");
 
-        if(campoPSW.value == ""){
+        if(campoPSW1.value == ""){
             alert("El campo debe estar completo")
-        } else if (campoPSW.value.length <= 8) {
+        } else if (campoPSW1.value.length <= 8) {
+            alert("La contraseña debe tener al menos 8 caracteres")
+        }
+
+        let campoPSW2 = document.querySelector("input.psw2");
+
+        if(campoPSW2.value == ""){
+            alert("El campo debe estar completo")
+        } else if (campoPSW2.value.length <= 8) {
             alert("La contraseña debe tener al menos 8 caracteres")
         }
     })

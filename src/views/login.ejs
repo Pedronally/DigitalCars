@@ -13,13 +13,13 @@
         <%- include('./partials/header.ejs') %> 
         
     <main>
-        <div class="create-form-login">
-        <form method="POST" action="/user/login">
+        <div >
+        <form class="create-form-login" method="POST" action="/user/login">
             <legend>Inicia Sesion</legend>
             <label for="user" >Email: </label>
-            <input class="form-login input" type="mail" name="email" id="email"></input>
+            <input class="mail" type="mail" name="email" id="email"></input>
             <label for="contrasenia" >Contraseña </label>
-            <input type="password" name="contrasenia" id="contrasenia"></input>
+            <input class="psw" type="password" name="contrasenia" id="contrasenia"></input>
             <input type="submit" value="ENVIAR"></input>
             <input type="reset" value="BORRAR"></input>
         </form>

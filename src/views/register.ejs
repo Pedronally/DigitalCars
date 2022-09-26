@@ -13,8 +13,8 @@
     <%- include('./partials/header.ejs') %> 
 
     <main>
-        <div class="create-formu">
-            <form  method="POST"  action="/user/register">
+        <div class='create-formu-register'>
+            <form class="create-formu" method="POST"  action="/user/register">
                 <legend>Registrate</legend>
                 <label for="name" > Nombre y Apellido: </label>
                 <input class="name" type="text" name="nombre" id="name"></input>
@@ -23,8 +23,9 @@
                 <label for="fdn" > Fecha de nacimiento: </label>
                 <input class="date" type="date" name="fdn" id="fdn"></input>                
                 <label for="psw" > Contraseña </label>
-                <input type="password" name="contrasenia" id="contrasenia"></input>
+                <input class="psw" type="password" name="contrasenia" id="contrasenia"></input>
                 <label for="psw2" > Repetir Contraseña: </label>
+                <input class="psw2" type="password" name="contrasenia" id="contrasenia"></input>
                 <input type="file" name="avatarFiles" id="file" multiple>
                 <input type="submit" value="ENVIAR"></input>
                 <input type="reset" value="BORRAR"></input>
