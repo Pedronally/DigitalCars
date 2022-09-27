@@ -104,7 +104,7 @@ font-weight: bold;
     height: 150px;
 }
 
-.create-formu {
+.create-formu-register {
     display: flex;
     flex-direction: column;
     background-color: #333;

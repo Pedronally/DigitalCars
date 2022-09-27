@@ -2,7 +2,7 @@
 window.addEventListener("load", function(){
 
 
-    let formularioLogin = document.querySelector("create-form-login");
+    let formularioLogin = document.querySelector(".create-form-login");
 
 
     
@@ -10,7 +10,7 @@ window.addEventListener("load", function(){
 formularioLogin.addEventListener("submit", function(e){
     e.preventDefault();
 
-    let campoUser = document.querySelector("input.user");
+    let campoUser = document.querySelector("input.mail");
     emailRegex = /^(?:[^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*|"[^\n"]+")@(?:[^<>()[\].,;:\s@"]+\.)+[^<>()[\]\.,;:\s@"]{2,63}$/i;
     if (!emailRegex.test(campoUser.value)) {
         alert("El email es erroneo")
