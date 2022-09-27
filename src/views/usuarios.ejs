@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="https://kit.fontawesome.com/fe384c9d88.js" crossorigin="anonymous"></script>
+    <title>Digital Cars</title>
+</head>
+
+        <%- include('./partials/header.ejs') %> 
+
+<body>
+<section class="productos">
+    <table>
+        <tr>
+          <th>Nombre</th>
+          <th>Mail</th>
+          <th>Fecha de Nacimiento</th>
+          <th>Editar</th>
+        </tr>
+    <% usuarios.forEach(function(usuario){ %>
+        <tr>
+            <td><%=usuario.nombre %></td>
+            <td><%=usuario.email %></td>
+            <td><%=usuario.fdn %></td>
+            <td ><a href="user/edit/<%=usuario.id_usuario %>">Editar</a></td>
+          </tr>
+    
+    <% }) %>
+</table>
+</section>
+</body>
+ 
+    
+
+<%- include('./partials/footer.ejs') %> 
+
+</html>

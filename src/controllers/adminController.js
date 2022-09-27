@@ -17,10 +17,10 @@ const controller = {
           db.Color.findAll().then(colores=>{
             db.Auto.findByPk(req.params.id).then(auto=>{
             console.log(auto);
-            //db.Color.findByPk({ where:{id_color : auto.color_id }}).then(color=>{
-                
-                res.render('editarProducto', {auto,colores})})
-            //})
+            db.Color.findOne({ where:{id_color : auto.color_id }}).then(color=>{
+                console.log(color)
+                res.render('editarProducto', {auto,colores,color})})
+            })
             
         
 })

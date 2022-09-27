@@ -29,7 +29,7 @@
             
             <select name="color">
                 
-                <option value="<%=auto.color_id%>">Seleccione un color</option>
+                <option value="<%=auto.color_id%>"><%= color.color %></option>
             <% colores.forEach(color => {%>
                 <option value="<%= color.id_color%>"><%= color.color %></option>
                 <%})%>

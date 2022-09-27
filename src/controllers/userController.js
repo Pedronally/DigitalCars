@@ -1,10 +1,16 @@
 const path = require("path");
 const db = require("../database/models");
-const { validationResult } = require("express-validator")
+const { validationResult } = require("express-validator");
+const { saveEdit } = require("./adminController");
 
 
 const controller = {
 
+    list: (req, res) => {
+        db.Usuario.findAll()
+        .then(usuarios => {res.render('usuarios', {usuarios})})
+        
+    },
     login: (req, res) => {
         res.render('login')
     },
@@ -55,6 +61,22 @@ const controller = {
             
         })
         
+    },
+    edit: (req, res) => {
+        db.Usuario.findByPk(req.params.id)
+        .then(usuario => {res.render('editUsuario', {usuario})})
+        
+    },
+    saveEdit : (req, res) => {
+        console.log(req.body)
+        const user = {
+            nombre: req.body.nombre,
+            email:req.body.email,
+            contrasenia:req.body.contrasenia,
+            fdn:req.body.fdn
+        }
+        db.Usuario.update(user,{where:{id_usuario: req.params.id}} ).then(()=>
+        {res.redirect('/user/list')})
     }
 
 }

@@ -15,8 +15,8 @@ const controller = {
     detalle: (req, res) => {
         //const products = JSON.parse(productArchivo)
         console.log(req.params)
-        db.Auto.findByPk(req.params.id,).then(auto=>{
-            console.log(auto)
+        db.Auto.findByPk(req.params.id).then(auto=>{
+            
         res.render('detalleDeProducto', {auto})
     })},
     eliminar:(req,res) => {

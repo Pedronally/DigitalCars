@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="https://kit.fontawesome.com/fe384c9d88.js" crossorigin="anonymous"></script>
+    <title>Digital Cars</title>
+</head>
+<body>
+    
+    <%- include('./partials/header.ejs') %> 
+
+    <main>
+        <div class="create-formu">
+            <form method="POST" action="/user/edit/<%=usuario.id_usuario%>?_method=PUT">
+                <legend>Registrate</legend>
+                <label for="name" > Nombre y Apellido: </label>
+                <input class="name" type="text" name="nombre" id="name" value="<%=usuario.nombre%>"></input>
+                <label for="user" > Email: </label>
+                <input class="mail" type="mail" name="email" id="user" value="<%=usuario.email%>"></input>
+                <label for="fdn" > Fecha de nacimiento: </label>
+                <input class="date" type="date" name="fdn" id="fdn" value="<%=usuario.fdn%>"></input>                
+                <label for="psw" > Contraseña </label>
+                <input type="password" name="contrasenia" id="contrasenia" value="<%=usuario.contrasenia%>"></input>
+                <input type="submit" value="ENVIAR"></input>
+                <input type="reset" value="BORRAR"></input>
+            </form>
+        </div>
+    </main>
+    <script src="/public/js/register.js"></script>
+</body>
+
+    <%- include('./partials/footer.ejs') %> 
+
+    
+
+</html>
