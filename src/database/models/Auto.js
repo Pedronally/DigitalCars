@@ -20,6 +20,9 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.BIGINT(4).UNSIGNED,
             allowNull: false
         },
+        foto: {
+            type: dataTypes.STRING(255)
+        }
         
     };
     let config = {

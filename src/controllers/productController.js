@@ -20,8 +20,11 @@ const controller = {
         res.render('detalleDeProducto', {auto})
     })},
     eliminar:(req,res) => {
-         db.Auto.destroy({where:{id_auto: req.params.id}})
-        res.render('/productos/listado')
+        db.Auto.destroy({where:{id_auto: req.params.id}}).then(()=>{
+            res.redirect('/productos/listado')
+
+        })
+        
     }
 
 }

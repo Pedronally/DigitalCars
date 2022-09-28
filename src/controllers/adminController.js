@@ -30,11 +30,13 @@ const controller = {
     saveNew: (req, res) => {
         
         console.log(req.body)
+        console.log(req.file)
         db.Auto.create({
             modelo: req.body.modelo,
             precio: req.body.precio,
             color_id: req.body.color,
             anio: req.body.anio,
+            foto: req.file.filename
         })
         .then(()=> {
             res.render('index')

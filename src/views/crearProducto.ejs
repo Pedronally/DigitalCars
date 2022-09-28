@@ -12,7 +12,7 @@
 
 <body>
         <div class="create-form">Crea tu producto</div>
-            <form  id="formulando" method="POST" action="/admin/create">
+            <form  id="formulando" method="POST" action="/admin/create" enctype="multipart/form-data">
                 <div class="form-group">
                     <input type="text" class="form-control" name="modelo" placeholder="Modelo" required="required" value="">
                 </div>
@@ -23,6 +23,7 @@
                 <div class="form-group">
                     <input type="text" class="form-control" name="anio" placeholder="anio" required="required" value="">
                 </div>
+                <input name="image" type="file">
                 <div class="form-group">
                     <select name="color">
                         <option value="">Seleccione un color</option>

@@ -36,19 +36,21 @@ const controller = {
                 res.render('index')
             })
         }
+        /// fijarse que no se repita
     },
     loginConfirm:(req,res)=>{
-        const resultValidation = validationResult(req.body);
+        const resultValidation = validationResult(req);
         console.log(resultValidation.errors.length)
         console.log(req.body)
-        //if(resultValidation.errors.length)
+        if(resultValidation.errors.length<=0){
         db.Usuario.findOne({ where:{email : req.body.email }})
         .then(user =>{
             console.log(user)
-            if(user.email != ""){
+            if(user){
                 if (req.body.contrasenia == user.contrasenia) {
                     console.log("inicio sesion")
                     res.redirect("/")
+                    
                 }
                 else{
                     console.log("error")
@@ -59,7 +61,11 @@ const controller = {
                 res.redirect('/login')
             }
             
+            
         })
+    }else{
+        res.render('login',{errors:resultValidation.mapped()})
+    }
         
     },
     edit: (req, res) => {
