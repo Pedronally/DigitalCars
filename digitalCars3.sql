@@ -145,7 +145,7 @@ CREATE TABLE IF NOT EXISTS `digitalcars`.`autos` (
   `foto` VARCHAR(255) NULL DEFAULT NULL,
   `color_id` INT(11) NOT NULL,
   PRIMARY KEY (`id_auto`),
-  INDEX `autos_ibfk_1` (`color_id` ASC) VISIBLE,
+  
   CONSTRAINT `autos_ibfk_1`
     FOREIGN KEY (`color_id`)
     REFERENCES `digitalcars`.`colores` (`id_color`))
@@ -178,7 +178,7 @@ CREATE TABLE IF NOT EXISTS `digitalcars`.`usuarios` (
   `foto` VARCHAR(45) NULL DEFAULT NULL,
   `rol_id` INT(11) NOT NULL,
   PRIMARY KEY (`id_usuario`),
-  INDEX `rol_id` (`rol_id` ASC) VISIBLE,
+  
   CONSTRAINT `usuarios_ibfk_1`
     FOREIGN KEY (`rol_id`)
     REFERENCES `digitalcars`.`roles` (`id_rol`))
@@ -197,8 +197,7 @@ CREATE TABLE IF NOT EXISTS `digitalcars`.`ventas` (
   `id_auto` INT(11) NOT NULL,
   `importe` INT(11) NOT NULL,
   PRIMARY KEY (`id_venta`),
-  INDEX `ventas_ibfk_1` (`id_usuario` ASC) VISIBLE,
-  INDEX `ventas_ibfk_2` (`id_auto` ASC) VISIBLE,
+
   CONSTRAINT `ventas_ibfk_1`
     FOREIGN KEY (`id_usuario`)
     REFERENCES `digitalcars`.`usuarios` (`id_usuario`),
