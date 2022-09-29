@@ -30,6 +30,7 @@ const controller = {
             email:req.body.email,
             contrasenia:req.body.contrasenia,
             fdn:req.body.fdn,
+            foto: req.file.filename,
             rol_id:2
                 })
             .then(()=>{
