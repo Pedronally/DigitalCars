@@ -21,6 +21,9 @@ module.exports = (sequelize, dataTypes) => {
         fdn: {
             type: dataTypes.DATE,
             allowNull: false
+        },
+        foto: {
+            type: dataTypes.STRING(255)
         }
     };
     let config = {
