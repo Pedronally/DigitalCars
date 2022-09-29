@@ -31,6 +31,7 @@ const controller = {
             email:req.body.email,
             contrasenia:bcrypt.hashSync(req.body.contrasenia, 10),
             fdn:req.body.fdn,
+            foto: req.file.filename,
             rol_id:2
                 })
             .then(()=>{
