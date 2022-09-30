@@ -12,8 +12,8 @@
 <%- include('./partials/header.ejs') %> 
 
 <body>
-        <div class="create-form">Crea tu producto</div>
-            <form  id="formulando" method="POST" action="/admin/create" enctype="multipart/form-data">
+        
+            <form  class="create-form" method="POST" action="/admin/create" enctype="multipart/form-data">Crea tu producto
                 <div class="form-group">
                     <input type="text" class="form-control" name="modelo" placeholder="Modelo"  value="">
                 </div>
@@ -32,7 +32,7 @@
                         <option value="<%= color.id_color%>"><%= color.color %></option>
                         <%})%>
                 </select>
-                </div>
+                
                 
                 
             <button type="submit">Guardar</button>

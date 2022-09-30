@@ -16,11 +16,7 @@
     <% products.forEach(function(product){ %>
         <% console.log(product) %>
         <article>
-<<<<<<< HEAD
             <img src="/images/<%= product.foto %>" alt="Producto">
-=======
-            <img src="/images/<%= product.foto %>" alt="Producto A">
->>>>>>> d1f27a14d9d0076155fef3558cf84ecb47e6b460
             <a href="/productos/detalle/<%= product.id_auto %>"> <h3> BMW <%= product.modelo %> </h3> </a>
             <a href="/carrito"><button type="submit">AGREGAR AL CARRITO</button> </a>
             <a href="/admin/edit/<%= product.id_auto %>"><button>EDITAR</button> </a>
