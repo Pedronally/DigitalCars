@@ -2,6 +2,7 @@ const path = require("path");
 const db = require("../database/models");
 const { validationResult } = require("express-validator");
 const { saveEdit } = require("./adminController");
+const bcrypt = require('bcrypt');
 
 
 const controller = {
@@ -28,8 +29,9 @@ const controller = {
         db.Usuario.create({
             nombre:req.body.nombre,
             email:req.body.email,
-            contrasenia:req.body.contrasenia,
+            contrasenia:bcrypt.hashSync(req.body.contrasenia, 10),
             fdn:req.body.fdn,
+            foto: req.file.filename,
             rol_id:2
                 })
             .then(()=>{
@@ -78,7 +80,7 @@ const controller = {
         const user = {
             nombre: req.body.nombre,
             email:req.body.email,
-            contrasenia:req.body.contrasenia,
+            contrasenia:bcrypt.hashSync(req.body.contrasenia, 10),
             fdn:req.body.fdn
         }
         db.Usuario.update(user,{where:{id_usuario: req.params.id}} ).then(()=>
