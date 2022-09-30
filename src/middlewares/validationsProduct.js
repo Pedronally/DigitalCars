@@ -6,9 +6,8 @@ module.exports = [
     body("modelo").notEmpty().withMessage("El modelo tiene que estar completo!").isLength({min:2, max:50}).withMessage("El modelo debe tener entre 2 y 50 caracteres"),
     body("precio").notEmpty().withMessage("El auto tiene que tener precio!").isFloat({min:10, max:30000}).withMessage(""),
     body("anio").notEmpty().withMessage("El auto tiene que especificar anio!").isInt({min:1990, max:2022}).withMessage("El auto ingrese un anio valido"),
-    body("color_id").notEmpty().withMessage("Ingrese un color!")
-    /* CUANDO AGREGUEMOS LAS FOTOS LO DESCOMENTAMOS
-    body("image").custom((value, {req}) => {
+    body("color_id").notEmpty().withMessage("Ingrese un color!"),
+    body("foto").custom((value, {req}) => {
         let file = req.file
         let acceptedExtensions = [".jpg", ".png", ".gif", ".jpeg"]
 
@@ -26,5 +25,5 @@ module.exports = [
         }
         return true
     })
-    */
+    
 ]

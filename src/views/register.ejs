@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/styles.css">
     <script src="https://kit.fontawesome.com/fe384c9d88.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <title>Digital Cars</title>
 </head>
 <body>
@@ -13,7 +14,7 @@
     <%- include('./partials/header.ejs') %> 
 
     <main>
-        <div class="create-formu">
+        <div class="create-formu-register">
             <form  method="POST"  action="/user/register">
                 <legend>Registrate</legend>
                 <label for="name" > Nombre y Apellido: </label>
@@ -23,15 +24,14 @@
                 <label for="fdn" > Fecha de nacimiento: </label>
                 <input class="date" type="date" name="fdn" id="fdn"></input>                
                 <label for="psw" > Contraseña </label>
-                <input type="password" name="contrasenia" id="contrasenia"></input>
-                <label for="psw2" > Repetir Contraseña: </label>
+                <input class = "psw" type="password" name="contrasenia" id="contrasenia"></input>
                 <input type="file" name="avatarFiles" id="file" multiple>
                 <input type="submit" value="ENVIAR"></input>
                 <input type="reset" value="BORRAR"></input>
             </form>
         </div>
     </main>
-    <script src="/public/js/register.js"></script>
+    <script src="/js/register.js"></script>
 </body>
 
     <%- include('./partials/footer.ejs') %> 

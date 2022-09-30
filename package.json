@@ -24,6 +24,7 @@
     "node-fetch": "^3.2.10",
     "nodemon": "^2.0.19",
     "sequelize": "^6.21.4",
+    "sweetalert": "^2.1.2",
     "uuid": "^8.3.2"
   }
 }
