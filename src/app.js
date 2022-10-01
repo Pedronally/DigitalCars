@@ -9,10 +9,25 @@ const userRouter = require('./routes/userRouter');
 const adminRouter = require('./routes/adminRouter');
 const productRouter = require('./routes/productRouter');
 const usersApi = require('./routes/usersApi');
-const productApi = require('./routes/productApi')
+const productApi = require('./routes/productApi');
+const session = require('express-session');
+const cookieParser = require('cookie-parser');
+const acceso = require('./middlewares/acceso');
 
 
 app.use(logger('dev'))
+
+app.use(session({
+    secret : 'topSecret',
+    resave: true,
+    saveUninitialized: true,
+}))
+
+//Aqui coloco el Middleware para activar lo referido a las cookies
+app.use(cookieParser());
+
+//Middleware de aplicación que se encarga de controlar si el usuario está logueado o no.
+app.use(acceso);
 
 app.use(methodOverride('_method'))
 

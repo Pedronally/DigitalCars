@@ -50,6 +50,7 @@ const controller = {
             console.log(user)
             if(user){
                 if (req.body.contrasenia == user.contrasenia) {
+                    req.session.usuario = user;
                     console.log("inicio sesion")
                     res.redirect("/")
                     
@@ -85,6 +86,9 @@ const controller = {
         }
         db.Usuario.update(user,{where:{id_usuario: req.params.id}} ).then(()=>
         {res.redirect('/user/list')})
+    },
+    loginConfirm1 : (req, res) => {
+        console.log('hola')
     }
 
 }
