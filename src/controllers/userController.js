@@ -40,7 +40,8 @@ const controller = {
         }
         /// fijarse que no se repita
     },
-    loginConfirm:(req,res)=>{
+    loginConfirm:(req,res)=>{ 
+        
         const resultValidation = validationResult(req);
         console.log(resultValidation.errors.length)
         console.log(req.body)
@@ -70,7 +71,7 @@ const controller = {
         res.render('login',{errors:resultValidation.mapped()})
     }
         
-    },
+},
     edit: (req, res) => {
         db.Usuario.findByPk(req.params.id)
         .then(usuario => {res.render('editUsuario', {usuario})})
@@ -87,9 +88,12 @@ const controller = {
         db.Usuario.update(user,{where:{id_usuario: req.params.id}} ).then(()=>
         {res.redirect('/user/list')})
     },
-    loginConfirm1 : (req, res) => {
-        console.log('hola')
-    }
+    logout: (req,res) =>{
+        req.session.destroy();
+        res.cookie('email',null,{maxAge: -1});
+        res.redirect('/')
+      }
+
 
 }
 module.exports = controller
