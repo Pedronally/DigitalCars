@@ -15,6 +15,7 @@ const cookieParser = require('cookie-parser');
 const acceso = require('./middlewares/acceso');
 
 
+
 app.use(logger('dev'))
 
 app.use(session({

@@ -1,7 +1,6 @@
 
 window.addEventListener("load", function(){
 
-
     let formularioLogin = document.querySelector(".create-form-login");
 
 
@@ -13,15 +12,15 @@ formularioLogin.addEventListener("submit", function(e){
     let campoUser = document.querySelector("input.mail");
     emailRegex = /^(?:[^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*|"[^\n"]+")@(?:[^<>()[\].,;:\s@"]+\.)+[^<>()[\]\.,;:\s@"]{2,63}$/i;
     if (!emailRegex.test(campoUser.value)) {
-        alert("El email es erroneo")
+        swal("Oops!", "Email erroneo!", "error");
     } else if(campoUser.value == ""){
-        alert("El campo debe estar completo")
+        swal("Ooops!", "Completa el campo!", "error");
     } 
  
     let campoPSW = document.querySelector("input.psw");
 
     if(campoPSW.value == ""){
-        alert("El campo debe estar completo")
+        swal("Ooops!", "Introduce contraseña!", "error");
     }
 })
 });

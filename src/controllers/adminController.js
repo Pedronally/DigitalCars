@@ -36,10 +36,10 @@ const controller = {
             precio: req.body.precio,
             color_id: req.body.color,
             anio: req.body.anio,
-            foto: req.file.filename
+            foto: req.file
         })
         .then(()=> {
-            res.render('index')
+            res.render('productos')
         })
          
         
