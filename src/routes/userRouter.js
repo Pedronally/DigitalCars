@@ -7,9 +7,9 @@ const uploadFile = require("../middlewares/multerMiddlewares");
 
 router.get('/list', userController.list)
 router.get('/login', userController.login)
-router.post('/login',/*validationLogin,*/ userController.loginConfirm)
+router.post('/login',validationLogin, userController.loginConfirm)
 router.get('/register', userController.register)
-router.post('/register',uploadFile.single("image") ,validations , userController.registerConfirm)
+router.post('/register',uploadFile.single("image") /*,validations*/ , userController.registerConfirm)
 router.get('/edit/:id', userController.edit)
 router.put('/edit/:id', userController.saveEdit)
 router.get('/logout', userController.logout)
