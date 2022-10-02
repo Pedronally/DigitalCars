@@ -16,14 +16,16 @@
     <% products.forEach(function(product){ %>
         <% console.log(product) %>
         <article>
-            <img src="/images/<%= product.foto %>" alt="Producto">
+            <img src="/images/<%= product.foto %>" alt="producto">
             <a href="/productos/detalle/<%= product.id_auto %>"> <h3> BMW <%= product.modelo %> </h3> </a>
-            <a href="/carrito"><button type="submit">AGREGAR AL CARRITO</button> </a>
+            <% if(locals.usuario.rol_id == 1) { %>
             <a href="/admin/edit/<%= product.id_auto %>"><button>EDITAR</button> </a>
-            <button type="submit">COMPRAR</button>
             <form method="POST" action="/productos/eliminar/<%=product.id_auto%>?_method=DELETE"> 
             <button>Eliminar</button>
             </form>
+            <% } else { %>
+            <button type="submit">COMPRAR</button>
+            <% }  %>
         </article>
     <% }) %>
     

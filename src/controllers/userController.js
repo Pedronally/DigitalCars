@@ -3,17 +3,24 @@ const db = require("../database/models");
 const { validationResult } = require("express-validator");
 const { saveEdit } = require("./adminController");
 const bcrypt = require('bcrypt');
+const { localsName } = require("ejs");
 
 
 const controller = {
 
     list: (req, res) => {
+    
         db.Usuario.findAll()
         .then(usuarios => {res.render('usuarios', {usuarios})})
         
     },
     login: (req, res) => {
+        if(req.session.usuario){
+            res.redirect('/')
+
+        }else{
         res.render('login')
+        }
     },
     register: (req, res) => {
         res.render('register')
