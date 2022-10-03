@@ -33,7 +33,7 @@ const controller = {
        if(resultValidation.errors.length>0){
             res.render('register',{errors:resultValidation.mapped()})
 
-        }else{
+        }
         db.Usuario.create({
             nombre:req.body.nombre,
             email:req.body.email,
@@ -45,13 +45,13 @@ const controller = {
             .then(()=>{
                 res.direct('/')
             })
-        }
+        },
     //} 
        /* else {
             res.render('register')
         }*/
         /// fijarse que no se repita
-    },
+    
     loginConfirm:(req,res)=>{ 
         
         const resultValidation = validationResult(req);
@@ -106,6 +106,6 @@ const controller = {
         res.redirect('/')
       }
 
-
-}
+    }
+    
 module.exports = controller

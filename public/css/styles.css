@@ -100,23 +100,43 @@ h3{
     top: 150px;
     left: 570px;
     color: white;
-font-weight: bold;
+    font-weight: bold;
     width: 200px;
-    height: 150px;
+    height: 155px;
+}
+.log{
+    font-size: 25px;
+}
+.reg{
+    font-size: 40px;
+    font-weight: bold;
+    font-style: italic;
 }
 
+.boton1{
+    color: white;
+    background-color: #04AA6D;
+    font-weight: bolder;
+}
+.boton2{
+    color: black;
+    background-color: red;
+    font-weight: bolder;
+}
 .create-formu-register {
     display: flex;
     flex-direction: column;
     background-color: #333;
     color: white;
- font-weight: bold;
+    font-weight: bold;
+    size-adjust: 10px;
     text-align: center;
     position: relative;
     top: 140px;
-    left: 580px;
-    width: 185px;
-    height: 235px;
+    left: 550px;
+    width: 200px;
+    height: 400px;
+    padding: 10px;
 }
 .prod a{
     position: relative;
