@@ -1,4 +1,4 @@
-/*
+
 window.addEventListener("load", function(){
 
     let formularioLogin = document.querySelector(".create-form-login");
@@ -22,5 +22,6 @@ formularioLogin.addEventListener("submit", function(e){
     if(campoPSW.value == ""){
         swal("Ooops!", "Introduce contraseña!", "error");
     }
+    formularioLogin.submit();
 })
 });

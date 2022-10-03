@@ -37,8 +37,11 @@
                 <% if (locals.errors && errors.contrasenia) { %>
                     <p style = "color: red"><%- errors.contrasenia.msg  %></p>
                 <% } %>   
-                <label for="foto">Foto:</label>
+                <label for="image">Foto:</label>
                 <input type="file" name="image" id="file" multiple>
+                <% if (locals.errors && errors.image) { %>
+                    <p style = "color: red"><%- errors.image.msg  %></p>
+                <% } %>
                 <input class ="boton1" type="submit" value="ENVIAR"></input>
                 <input class ="boton2" type="reset" value="BORRAR"></input>
             </form>

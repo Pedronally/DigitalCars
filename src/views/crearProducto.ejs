@@ -22,24 +22,24 @@
                     <% if (locals.errors && errors.precio) { %>
                         <p style = "color: red"><%- errors.precio.msg  %></p>
                     <% } %>  
-                    <input type="text" class="form-control" name="anio" placeholder="anio"  value=""></input>
+                    <input type="text" class="form-control" name="anio" placeholder="año"  value=""></input>
                     <% if (locals.errors && errors.anio) { %>
                         <p style = "color: red"><%- errors.anio.msg  %></p>
+                    <% } %> 
+                    <select name="color_id">
+                        <option value="">Seleccione un color</option>
+                    <%colores.forEach(color => {%>
+                        <option value="<%= color.id_color%>"><%= color.color %></option>
+                        <%})%>     
+                    </select>
+                    <% if (locals.errors && errors.color_id) { %>
+                        <p style = "color: red"><%- errors.color_id.msg  %></p>
                     <% } %> 
                     <input  name="image" type="file"> </input>
                     <% if (locals.errors && errors.image) { %>
                     <p style = "color: red"><%- errors.image.msg  %></p>
                     <% } %> 
-                    <select name="color">
-                        <% if (locals.errors && errors.color) { %>
-                            <p style = "color: red"><%- errors.color.msg  %></p>
-                        <% } %> 
-                        <option value="">Seleccione un color</option>
-                    <% colores.forEach(color => {%>
-                        <option value="<%= color.id_color%>"><%= color.color %></option>
-                        <%})%>
-                        
-                </select>
+                    
                 
                 
                 

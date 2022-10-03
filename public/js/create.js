@@ -1,4 +1,4 @@
-/*const { default: swal } = require("sweetalert");
+const { default: swal } = require("sweetalert");
 
 window.addEventListener("load", function(){
 
@@ -34,5 +34,7 @@ window.addEventListener("load", function(){
     if(campoColor.value == ""){
         swal("Oops!", "El auto debe especificar el Color!", "error");    
     }
+
+    formularioCreate.submit();
 
 });

@@ -1,4 +1,4 @@
-/*
+
 window.addEventListener("load", function(){
     
 
@@ -33,8 +33,7 @@ window.addEventListener("load", function(){
             swal("Oops!", "La contraseña debe tener al menos 8 caracteres", "error");
         }
 
-      
+      formularioRegister.submit();
     })
 
 });
-*/
