@@ -9,7 +9,7 @@ module.exports = [
     body("contrasenia").notEmpty().withMessage("La contrasenia no puede ser vacia").isLength({min:2, max:50}).withMessage("ingrese una contrasenia valida!"),
     
 
-    /* CUANDO AGREGUEMOS LAS FOTOS LO DESCOMENTAMOS
+   /*  
     body("image").custom((value, {req}) => {
         let file = req.file
         let acceptedExtensions = [".jpg", ".png", ".gif", ".jpeg"]

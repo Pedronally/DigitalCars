@@ -18,7 +18,7 @@
             <form  method="POST"  action="/user/register"  enctype="multipart/form-data">
                 <legend class="reg">Registrate</legend>
                 <label for="name" > Nombre y Apellido: </label>
-                <input class="name" type="text" name="nombre" id="name"><p></p></input>
+                <input class="name" type="text" name="nombre" id="name"></input>
                 <% if (locals.errors && errors.nombre) { %>
                     <p style = "color: red"><%- errors.nombre.msg  %></p>
                 <% } %>     
