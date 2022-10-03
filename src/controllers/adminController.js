@@ -3,6 +3,7 @@ const fs = require('fs');
 const productArchivo = fs.readFileSync (path.join(__dirname, '../data/productos.json'))
 let db = require("../database/models");
 const e = require("express");
+const { validationResult } = require("express-validator");
 
 const controller = {
 
@@ -43,7 +44,11 @@ const controller = {
         
     },
     saveNew: (req, res) => {
-        
+        const resultValidation = validationResult(req);
+        if(resultValidation.errors.length>0){
+            res.redirect('/admin/create')
+
+        }else{
         console.log(req.body)
         console.log(req.file)
         db.Auto.create({
@@ -51,12 +56,12 @@ const controller = {
             precio: req.body.precio,
             color_id: req.body.color,
             anio: req.body.anio,
-            foto: req.file
+            foto: req.file.filename
         })
         .then(()=> {
-            res.render('productos')
+            res.redirect('/productos/listado')
         })
-         
+    }
         
     },
     saveEdit: (req, res) => {

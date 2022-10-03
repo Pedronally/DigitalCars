@@ -12,7 +12,6 @@ module.exports = [
      
 
 
-    
     body("image").custom((value, {req}) => {
         let file = req.file
         let acceptedExtensions = [".jpg", ".png", ".gif", ".jpeg"]

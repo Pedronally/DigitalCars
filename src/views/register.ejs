@@ -15,10 +15,10 @@
 
     <main>
         <div class="create-formu-register">
-            <form  method="POST"  action="user/register"  enctype="multipart/form-data">
-                <legend>Registrate</legend>
+            <form  method="POST"  action="/user/register"  enctype="multipart/form-data">
+                <legend class="reg">Registrate</legend>
                 <label for="name" > Nombre y Apellido: </label>
-                <input class="name" type="text" name="nombre" id="name"></input>
+                <input class="name" type="text" name="nombre" id="name"><p></p></input>
                 <% if (locals.errors && errors.nombre) { %>
                     <p style = "color: red"><%- errors.nombre.msg  %></p>
                 <% } %>     
@@ -32,14 +32,15 @@
                 <% if (locals.errors && errors.fdn) { %>
                     <p style = "color: red"><%- errors.fdn.msg  %></p>
                 <% } %>                   
-                <label for="psw" > Contraseña </label>
+                <label for="psw" > Contraseña: </label>
                 <input type="password" name="contrasenia" id="contrasenia"></input>
                 <% if (locals.errors && errors.contrasenia) { %>
                     <p style = "color: red"><%- errors.contrasenia.msg  %></p>
                 <% } %>   
+                <label for="foto">Foto:</label>
                 <input type="file" name="image" id="file" multiple>
-                <input type="submit" value="ENVIAR"></input>
-                <input type="reset" value="BORRAR"></input>
+                <input class ="boton1" type="submit" value="ENVIAR"></input>
+                <input class ="boton2" type="reset" value="BORRAR"></input>
             </form>
         </div>
     </main>
