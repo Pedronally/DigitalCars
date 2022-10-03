@@ -1,4 +1,4 @@
-/*
+
 window.addEventListener("load", function(){
 
     let formularioLogin = document.querySelector(".create-form-login");
@@ -24,4 +24,3 @@ formularioLogin.addEventListener("submit", function(e){
     }
 })
 });
-*/

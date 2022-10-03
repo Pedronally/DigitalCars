@@ -1,6 +1,6 @@
 const path = require("path");
 const db = require("../database/models");
-const { validationResult } = require("express-validator");
+const { userValidationResult } = require("express-validator");
 const { saveEdit } = require("./adminController");
 const bcrypt = require('bcrypt');
 const { localsName } = require("ejs");
@@ -26,13 +26,13 @@ const controller = {
         res.render('register')
     },
     registerConfirm:(req,res)=>{
-       const resultValidation = validationResult(req);
+       const resultValidation = userValidationResult(req);
        console.log(resultValidation.errors)
        console.log(req.body)
        if(resultValidation.errors.length>0){
             res.render('register',{errors:resultValidation.mapped()})
 
-        }else{
+        }
         db.Usuario.create({
             nombre:req.body.nombre,
             email:req.body.email,
@@ -44,7 +44,7 @@ const controller = {
             .then(()=>{
                 res.render('index')
             })
-        }
+        
         /// fijarse que no se repita
     },
     loginConfirm:(req,res)=>{ 

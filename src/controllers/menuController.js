@@ -16,7 +16,7 @@ const controlador = {
         res.render('../views/login.ejs');
 
         const { userMail } = req.body
-        if (userMail.email == jsonUsers.email) {
+        if (userMail.mail == jsonUsers.mail) {
             return res.render('../views/index.ejs')
         } 
     },
