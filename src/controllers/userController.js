@@ -26,7 +26,8 @@ const controller = {
         res.render('register')
     },
     registerConfirm:(req,res)=>{
-       const resultValidation = validationResult(req);
+       // if(req.file){
+        const resultValidation = validationResult(req);
        console.log(resultValidation.errors)
        console.log(req.body)
        if(resultValidation.errors.length>0){
@@ -45,6 +46,10 @@ const controller = {
                 res.render('index')
             })
         }
+    //} 
+       /* else {
+            res.render('register')
+        }*/
         /// fijarse que no se repita
     },
     loginConfirm:(req,res)=>{ 

@@ -8,11 +8,10 @@ module.exports = [
     body("nombre").notEmpty().withMessage("El nombre no puede ser vacio").isLength({min:2, max:50}).withMessage("ingrese un nombre valido!"),
     body("email").notEmpty().withMessage("El correo no puede ser vacio").isEmail({min:2, max:50}).withMessage("ingrese un correo valido!"),
     body("contrasenia").notEmpty().withMessage("La contrasenia no puede ser vacia").isLength({min:2, max:50}).withMessage("ingrese una contrasenia valida!"),
-    body("fdn").notEmpty().withMessage("Ingrese una fecha de nacimiento")
+    body("fdn").notEmpty().withMessage("Ingrese una fecha de nacimiento"),
      
 
 
-    /* CUANDO AGREGUEMOS LAS FOTOS LO DESCOMENTAMOS
     body("image").custom((value, {req}) => {
         let file = req.file
         let acceptedExtensions = [".jpg", ".png", ".gif", ".jpeg"]
@@ -30,7 +29,7 @@ module.exports = [
             throw new Error("Adjunte una image con formato: " + acceptedExtensions + " y peso máximo 10mb.")
         }
         return true
-    })*/
+    })
 
 
 
