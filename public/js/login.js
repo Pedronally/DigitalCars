@@ -24,3 +24,4 @@ formularioLogin.addEventListener("submit", function(e){
     }
 })
 });
+*/
