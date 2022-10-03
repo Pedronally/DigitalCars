@@ -25,3 +25,4 @@ formularioLogin.addEventListener("submit", function(e){
     formularioLogin.submit();
 })
 });
+*/
