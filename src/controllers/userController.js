@@ -43,7 +43,7 @@ const controller = {
             rol_id:2
                 })
             .then(()=>{
-                res.render('index')
+                res.direct('/')
             })
         }
     //} 
