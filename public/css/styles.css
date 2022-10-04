@@ -137,6 +137,19 @@ h3{
     height: 100%;
     padding: 10px;
 }
+
+.verData{
+    text-align: center;
+    background-color: #333;
+    color: white;
+    position: relative;
+    top: 140px;
+    left: 550px;
+    width: 250px;
+    height: 100%;
+    font-size: 20px;
+}
+
 .prod a{
     position: relative;
     top: 150px;
