@@ -16,25 +16,25 @@ window.addEventListener("load", function () {
 
      if (campoNombre == "") {
       errores.push("Introduce un nombre!");
-    } else if (campoNombre.value.length <= 2) {
+    } /*else if (campoNombre.value.length <= 2) {
       errores.push("El nombre debe tener al menos 2 caracteres!");
-    }
+    }*/
     if (campoUser.value == "") {
       errores.push("El email debe estar completo!");
-    } else if (!emailRegex.test(campoUser.value)) {
+    } /*else if (!emailRegex.test(campoUser.value)) {
         errores.push("Email inexistente!");
       
-    }
+    }*/
    
     if (campoPsw.value == "") {
         errores.push(" La contraseña debe tener al menos 8 caracteres");
       
-    } else if (campoPsw.value.length <= 8) {
+    } /*else if (campoPsw.value.length <= 8) {
         errores.push("Se necesita una contraseña!");
    
-    } 
+    } */
     if (errores==0){
-        formularioRegister.submit()
+      swal("Ok!", "Registrado con exito!", "success").then(()=>{formularioRegister.submit()})
           } else {
               swal("Ooops!", "Completa los campos!", "error").then(()=>{formularioRegister.submit()})
               
