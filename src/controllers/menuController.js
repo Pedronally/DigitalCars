@@ -48,6 +48,9 @@ const controlador = {
     },
     about: (req, res) => {
         res.render('../views/about.ejs')
+    },
+    verPerfil: (req, res) => {
+        res.render('../views/verPerfil.ejs')
     }
 }
 

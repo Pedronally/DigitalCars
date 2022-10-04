@@ -26,7 +26,7 @@ window.addEventListener("load", function(){
         if(campoColor.value == ""){
             errores.push("El auto debe especificar el Color!")  
         }
-        console.log(errores)
+        
         if (errores.length==0){
             formularioCreate.submit()
               } else {
@@ -36,24 +36,8 @@ window.addEventListener("load", function(){
         
 
 
-   
+              
    
    
     })
-    
-   
-    
-
-    
-
-    
-
-    
-    
-
-    
-
-
-
-
 });

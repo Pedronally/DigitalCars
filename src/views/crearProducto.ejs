@@ -26,7 +26,7 @@
                     <% if (locals.errors && errors.anio) { %>
                         <p style = "color: red"><%- errors.anio.msg  %></p>
                     <% } %> 
-                    <select name="color_id">
+                    <select name="color_id" id="color_id">
                         <option value="">Seleccione un color</option>
                     <%colores.forEach(color => {%>
                         <option value="<%= color.id_color%>"><%= color.color %></option>
@@ -39,14 +39,7 @@
                     <% if (locals.errors && errors.image) { %>
                     <p style = "color: red"><%- errors.image.msg  %></p>
                     <% } %> 
-                    <select name="color_id" id="color_id">
-                        <% if (locals.errors && errors.color) { %>
-                            <p style = "color: red"><%- errors.color.msg  %></p>
-                        <% } %> 
-                        <option value="">Seleccione un color</option>
-                    <% colores.forEach(color => {%>
-                        <option value="<%= color.id_color%>"><%= color.color %></option>
-                        <%})%>
+                    
                         
                 </select>
                 

@@ -13,9 +13,9 @@
 
     <body>
         <div class="create-form-edit">Edita tu producto</div>
-        <form class="create-form-edit" method="POST" action="/admin/edit/<%=auto.id_auto%>?_method=PUT">
+        <form class="create-form-edit" method="POST" enctype="multipart/form-data" action="/admin/edit/<%=auto.id_auto%>?_method=PUT">
             <div class="form-group">
-                
+
                 <input type="text" class="form-control" name="modelo" placeholder="Modelo" required="required"
                     value="<%= auto.modelo %>">
             </div>
@@ -35,6 +35,7 @@
                 <option value="<%= color.id_color%>"><%= color.color %></option>
                 <%})%>
             </select>
+            <input  name="image" type="file"> </input>
             
             <button type="submit">Guardar</button>
         </form>

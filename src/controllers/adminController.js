@@ -44,15 +44,13 @@ const controller = {
     },
     saveNew: (req, res) => {
         const resultValidation = validationResult(req);
-        console.log(req.body)
-        console.log(resultValidation)
+        
         if(resultValidation.errors.length>0){
             db.Color.findAll().then(colores=>{
                 res.render('crearProducto',{errors:resultValidation.mapped(),colores:colores},)
             })
         }else{
-        console.log(req.body)
-        console.log(req.file)
+        
         
         db.Auto.create({
             modelo:req.body.modelo,
@@ -69,7 +67,10 @@ const controller = {
         
     },
     saveEdit: (req, res) => {
+
+        console.log(req.file)
         
+        if(req.file){
         const auto = {
             modelo: req.body.modelo,
             precio: req.body.precio,
@@ -79,6 +80,18 @@ const controller = {
         }
         db.Auto.update(auto,{where:{id_auto: req.params.id}})
         res.redirect('/productos/listado')
+    } else { 
+        const auto = {
+            modelo: req.body.modelo,
+            precio: req.body.precio,
+            color_id: req.body.color,
+            anio: req.body.anio,
+           
+        }
+        db.Auto.update(auto,{where:{id_auto: req.params.id}})
+        res.redirect('/productos/listado')
+        
+    }
     },
 }
 module.exports = controller

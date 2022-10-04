@@ -4,14 +4,14 @@
         <img class="Logo" src="/images/logo.png" alt="Logo Digital Cars">
         <a href="/">Inicio</a>
         <a href="/productos/listado">Productos</a>
-        <a href="#contacto">Contacto</a>
         <a href="/about">Sobre nosotros</a>
+        <a>Mi perfil</a>
         <a href="/carrito"> <i class="fa-solid fa-cart-shopping"></i> </a>
         <a href="/user/login"> <i class="fa-solid fa-user"></i> </a>
         <a href="/user/register"> <i class="fa-solid fa-id-card"></i></a>
         <a href="/admin/create"> <i class="fa-solid fa-plus"></i> </a>
         <% if(locals.usuario) { %>
-        <a>Hola <%= locals.usuario.nombre %>!</a>
+        <a href="/verPerfil">Hola <%= locals.usuario.nombre %>!</a>
         <a href="/user/logout">Cerrar Sesion</a>
         <% }  %>
     </div>
