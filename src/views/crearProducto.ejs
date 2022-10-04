@@ -14,15 +14,15 @@
 <body>
         
             <form  class="create-form" method="POST" action="/admin/create" enctype="multipart/form-data">Crea tu producto
-                    <input type="text" class="form-control" name="modelo" placeholder="Modelo"  value=""></input>
+                    <input type="text" class="form-control" name="modelo" id="modelo" placeholder="Modelo"  value=""></input>
                     <% if (locals.errors && errors.modelo) { %>
                         <p style = "color: red"><%- errors.modelo.msg  %></p>
                     <% } %>  
-                    <input type="number" class="form-control" name="precio" placeholder="Precio"  value=""> </input>
+                    <input type="number" class="form-control" name="precio" id="precio" placeholder="Precio"  value=""> </input>
                     <% if (locals.errors && errors.precio) { %>
                         <p style = "color: red"><%- errors.precio.msg  %></p>
                     <% } %>  
-                    <input type="text" class="form-control" name="anio" placeholder="año"  value=""></input>
+                    <input type="text" class="form-control" name="anio" id="anio" placeholder="anio"  value=""></input>
                     <% if (locals.errors && errors.anio) { %>
                         <p style = "color: red"><%- errors.anio.msg  %></p>
                     <% } %> 
@@ -39,7 +39,16 @@
                     <% if (locals.errors && errors.image) { %>
                     <p style = "color: red"><%- errors.image.msg  %></p>
                     <% } %> 
-                    
+                    <select name="color_id" id="color_id">
+                        <% if (locals.errors && errors.color) { %>
+                            <p style = "color: red"><%- errors.color.msg  %></p>
+                        <% } %> 
+                        <option value="">Seleccione un color</option>
+                    <% colores.forEach(color => {%>
+                        <option value="<%= color.id_color%>"><%= color.color %></option>
+                        <%})%>
+                        
+                </select>
                 
                 
                 

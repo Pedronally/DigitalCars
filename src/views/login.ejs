@@ -18,12 +18,12 @@
         <form class="create-form-login" method="POST" action="/user/login">
             <legend class="log">Inicia Sesion</legend>
             <label for="user" >Email: </label>
-            <input class="mail" type="mail" name="email" id="email"></input>
+            <input class="email" type="mail" name="email" id="email"></input>
             <% if (locals.errors && errors.email) { %>
                 <p style = "color: red"><%- errors.email.msg  %></p>
             <% } %>   
             <label for="contrasenia" >Contraseña </label>
-            <input class="psw" type="password" name="contrasenia" id="contrasenia"></input>
+            <input class="contrasenia" type="password" name="contrasenia" id="contrasenia"></input>
             <% if (locals.errors && errors.contrasenia) { %>
                 <p style = "color: red"><%- errors.contrasenia.msg  %></p>
             <% } %>   

@@ -1,39 +1,61 @@
-const { default: swal } = require("sweetalert");
 
 window.addEventListener("load", function(){
 
-    let formularioCreate = document.querySelector(".create-form");
+        let formularioCreate = document.querySelector(".create-form");
+        let campoModelo = document.getElementById("modelo");
+        let campoPrecio = document.getElementById("precio");
+        let campoAnio = document.getElementById("anio");
+        let campoColor = document.getElementById("color_id");
+        let errores = [];
+
 
     formularioCreate.addEventListener("submit", function(e){
+        console.log('tadeo')
         e.preventDefault();
     
-        let campoModelo = document.querySelector("input.modelo");
-    
+        
         if(campoModelo.value == ""){
-            swal("Oops!", "Introduce un nombre!", "error");
+            errores.push("Introduce un nombre!")
         } else if(campoModelo.value.length <= 5){
-            swal("El campo debe tener como mínimo 5 caracteres")
+            errores.push("El campo debe tener como mínimo 5 caracteres");
+            
+        } if(campoPrecio.value == 0){
+            errores.push("El auto no puede valer 0!");
+          
+        } if(campoPrecio.value == ""){
+            errores.push("Ingrese un precio!");    
         }
+        if(campoColor.value == ""){
+            errores.push("El auto debe especificar el Color!")  
+        }
+        console.log(errores)
+        if (errores.length==0){
+            formularioCreate.submit()
+              } else {
+                  swal("Ooops!", "Completa los campos!", "error").then(()=>{formularioCreate.submit()})
+                  
+              }
+        
+
+
+   
+   
+   
     })
     
-    let campoPrecio = document.querySelector("input.precio");
-
-    if(campoPrecio.value == 0){
-        swal("Oops!", "El auto no puede valer 0!", "error");    
-}
-
-    let campoAnio = document.querySelector("input.anio");
-
-    if(campoPrecio.value == ""){
-        swal("Oops!", "El auto debe especificar el Año!", "error");    
-    }
+   
+    
 
     
-    let campoColor = document.querySelector("input.color");
 
-    if(campoColor.value == ""){
-        swal("Oops!", "El auto debe especificar el Color!", "error");    
-    }
+    
+
+    
+    
+
+    
+
+
 
     formularioCreate.submit();
 
