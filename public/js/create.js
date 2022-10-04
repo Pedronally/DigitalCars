@@ -10,7 +10,7 @@ window.addEventListener("load", function(){
 
 
     formularioCreate.addEventListener("submit", function(e){
-        console.log('tadeo')
+
         e.preventDefault();
     
         
@@ -28,7 +28,7 @@ window.addEventListener("load", function(){
         if(campoColor.value == ""){
             errores.push("El auto debe especificar el Color!")  
         }
-        console.log(errores)
+        
         if (errores.length==0){
             formularioCreate.submit()
               } else {
@@ -38,7 +38,7 @@ window.addEventListener("load", function(){
         
 
 
-   
+              
    
    
     })
@@ -57,6 +57,6 @@ window.addEventListener("load", function(){
 
 
 
-    formularioCreate.submit();
+    
 
 });

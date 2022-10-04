@@ -45,15 +45,13 @@ const controller = {
     },
     saveNew: (req, res) => {
         const resultValidation = validationResult(req);
-        console.log(req.body)
-        console.log(resultValidation)
+        
         if(resultValidation.errors.length>0){
             db.Color.findAll().then(colores=>{
                 res.render('crearProducto',{errors:resultValidation.mapped(),colores:colores},)
             })
         }else{
-        console.log(req.body)
-        console.log(req.file)
+        
         
         db.Auto.create({
             modelo:req.body.modelo,
