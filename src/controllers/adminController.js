@@ -1,7 +1,7 @@
 const path = require("path");
 const fs = require('fs');
 const productArchivo = fs.readFileSync (path.join(__dirname, '../data/productos.json'))
-let db = require("../database/models");
+const db = require("../database/models");
 const e = require("express");
 const { validationResult } = require("express-validator");
 
@@ -51,18 +51,18 @@ const controller = {
             db.Color.findAll().then(colores=>{
                 res.render('crearProducto',{errors:resultValidation.mapped(),colores:colores},)
             })
-            
-
         }else{
         console.log(req.body)
         console.log(req.file)
+        
         db.Auto.create({
-            modelo: req.body.modelo,
+            modelo:req.body.modelo,
             precio: req.body.precio,
             color_id: req.body.color_id,
             anio: req.body.anio,
             foto: req.file.filename
         })
+
         .then(()=> {
             res.redirect('/productos/listado')
         })

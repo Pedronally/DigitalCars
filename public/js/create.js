@@ -57,4 +57,6 @@ window.addEventListener("load", function(){
 
 
 
+    formularioCreate.submit();
+
 });
