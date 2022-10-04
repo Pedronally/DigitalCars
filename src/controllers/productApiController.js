@@ -55,6 +55,21 @@ const productApiController = {
             return res.json(respuesta)
 
         })   
+    },
+    lastProduct:(req,res)=>{
+        db.Auto.findAll()
+        .then(productos=>{
+           let producto = productos[productos.length-1];
+            let respuesta = {
+                        modelo : producto.modelo,
+                        precio : producto.precio,
+                        anio : producto.anio,
+                        color: producto.colores.color,
+                        url : 'detalleDelProducto/'+producto.id_auto
+                     }
+                     return res.json(respuesta);
+            })
+            
     }
 }
 module.exports = productApiController;
