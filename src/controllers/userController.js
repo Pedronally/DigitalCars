@@ -23,7 +23,12 @@ const controller = {
         }
     },
     register: (req, res) => {
+        if(req.session.usuario){
+            res.redirect('/')
+
+        }else{
         res.render('register')
+        }
     },
     registerConfirm:(req,res)=>{
        // if(req.file){
@@ -43,6 +48,7 @@ const controller = {
             rol_id:2
                 })
             .then(()=>{
+                
                 res.redirect('/')
             })
         },
@@ -60,9 +66,11 @@ const controller = {
         if(resultValidation.errors.length<=0){
         db.Usuario.findOne({ where:{email : req.body.email }})
         .then(user =>{
-            console.log(user)
+            console.log(user.contrasenia)
+            console.log(bcrypt.hashSync(req.body.contrasenia, 10))
             if(user){
-                if (req.body.contrasenia == user.contrasenia) {
+                const validPassword = bcrypt.compare(req.body.contrasenia, user.contrasenia)
+                if (validPassword) {
                     req.session.usuario = user;
                     console.log("inicio sesion")
                     res.redirect("/")
@@ -97,6 +105,7 @@ const controller = {
             contrasenia:bcrypt.hashSync(req.body.contrasenia, 10),
             fdn:req.body.fdn
         }
+        console.log(user)
         db.Usuario.update(user,{where:{id_usuario: req.params.id}} ).then(()=>
         {res.redirect('/user/list')})
     },

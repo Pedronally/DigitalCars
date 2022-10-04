@@ -15,10 +15,13 @@
     
     <article class="verData">
 
+       <img src="images/<%= locals.usuario.foto %>" >  </img>
        <p> <%= locals.usuario.nombre %> </p>
        <p> <%= locals.usuario.email %> </p>
        <p> <%= locals.usuario.fdn %> </p>
-       <p> <%= locals.usuario.foto %> </p>
+       <a href="/user/edit/<%=locals.usuario.id_usuario %>">Editar</a>
+
+
 
 
     </article>

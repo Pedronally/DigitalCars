@@ -49,7 +49,7 @@ const productApiController = {
                         precio : producto.precio,
                         anio : producto.anio,
                         color: producto.colores.color,
-                        url : 'detalleDelProducto/'+producto.id_auto
+                        url : 'localhost:3050/productos/detalle'+producto.id_auto
                      }
             
             return res.json(respuesta)
@@ -57,17 +57,20 @@ const productApiController = {
         })   
     },
     lastProduct:(req,res)=>{
-        db.Auto.findAll()
+        db.Auto.findAll({include: {association: 'colores'}})
         .then(productos=>{
-           let producto = productos[productos.length-1];
+            console.log(productos);
+            let producto = productos[productos.length-1];
             let respuesta = {
                         modelo : producto.modelo,
                         precio : producto.precio,
                         anio : producto.anio,
                         color: producto.colores.color,
-                        url : 'detalleDelProducto/'+producto.id_auto
+                        url : 'localhost:3050/productos/detalle'+producto.id_auto
                      }
                      return res.json(respuesta);
+           
+
             })
             
     }

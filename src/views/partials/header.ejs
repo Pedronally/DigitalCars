@@ -1,4 +1,7 @@
-
+<link rel="stylesheet" 
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" 
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" 
+      crossorigin="anonymous">
 <header>
     <div class="topnav">
         <img class="Logo" src="/images/logo.png" alt="Logo Digital Cars">
@@ -8,13 +11,17 @@
         <a href="/carrito"> <i class="fa-solid fa-cart-shopping"></i> </a>
         <a href="/user/login"> <i class="fa-solid fa-user"></i> </a>
         <a href="/user/register"> <i class="fa-solid fa-id-card"></i></a>
+        <% if(locals.usuario.rol_id == 1) { %>
         <a href="/admin/create"> <i class="fa-solid fa-plus"></i> </a>
+        <% }  %>
         <% if(locals.usuario) { %>
         <a href="/verPerfil">Hola <%= locals.usuario.nombre %>!</a>
         <a href="/user/logout">Cerrar Sesion</a>
         <% }  %>
+        <% if(locals.usuario.rol_id == 1) { %>
+        <a href="/user/list"> <i class="fa-solid fa-list"></i> </a>
+        <% }  %>
     </div>
 </header>
-
 
 
