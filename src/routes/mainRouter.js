@@ -11,5 +11,6 @@ router.get('/crear', controller.crear);
 router.get('/products/:productId/edit', controller.editar);
 router.post('/crear', controller.guardar);
 router.get('/about', controller.about);
+router.get('/verPerfil', controller.verPerfil);
 
 module.exports = router;
