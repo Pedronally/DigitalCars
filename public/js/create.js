@@ -1,4 +1,3 @@
-
 window.addEventListener("load", function(){
 
         let formularioCreate = document.querySelector(".create-form");
@@ -10,10 +9,9 @@ window.addEventListener("load", function(){
 
 
     formularioCreate.addEventListener("submit", function(e){
-        console.log('tadeo')
-        e.preventDefault();
+       e.preventDefault();
     
-        
+     
         if(campoModelo.value == ""){
             errores.push("Introduce un nombre!")
         } else if(campoModelo.value.length <= 5){
@@ -57,6 +55,5 @@ window.addEventListener("load", function(){
 
 
 
-    formularioCreate.submit();
 
 });

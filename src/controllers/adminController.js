@@ -12,7 +12,6 @@ const controller = {
             if(req.session.usuario.rol_id == 1){    
         db.Color.findAll()
         .then(colores=> {
-            
             res.render('crearProducto', {colores})
         })
        } else {
@@ -76,6 +75,7 @@ const controller = {
             precio: req.body.precio,
             color_id: req.body.color,
             anio: req.body.anio,
+            foto: req.file.filename
         }
         db.Auto.update(auto,{where:{id_auto: req.params.id}})
         res.redirect('/productos/listado')

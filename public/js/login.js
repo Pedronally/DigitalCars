@@ -33,6 +33,6 @@ formularioLogin.addEventListener("submit", function(e){
         swal("Ooops!", "Completa los campos!", "error").then(()=>{formularioLogin.submit()})
         
     }
-    formularioLogin.submit();
+    
 })
 });
