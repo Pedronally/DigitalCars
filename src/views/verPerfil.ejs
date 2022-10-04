@@ -13,9 +13,17 @@
     <%- include('./partials/header.ejs') %>  
     
     
+    <article class="verData">
+
+       <p> <%= locals.usuario.nombre %> </p>
+       <p> <%= locals.usuario.email %> </p>
+       <p> <%= locals.usuario.fdn %> </p>
+       <p> <%= locals.usuario.foto %> </p>
+
+
+    </article>
     
-    
-    <h1>MI PERFIL</h1>  
+      
 
 
      
@@ -24,6 +32,6 @@
 
 
 
-<%- include('./partials/footer.ejs') %> 
+ 
 
 </html>        
