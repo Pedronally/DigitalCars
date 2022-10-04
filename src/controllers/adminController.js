@@ -45,8 +45,13 @@ const controller = {
     },
     saveNew: (req, res) => {
         const resultValidation = validationResult(req);
+        console.log(req.body)
+        console.log(resultValidation)
         if(resultValidation.errors.length>0){
-            res.redirect('/admin/create')
+            db.Color.findAll().then(colores=>{
+                res.render('crearProducto',{errors:resultValidation.mapped(),colores:colores},)
+            })
+            
 
         }else{
         console.log(req.body)
@@ -54,7 +59,7 @@ const controller = {
         db.Auto.create({
             modelo: req.body.modelo,
             precio: req.body.precio,
-            color_id: req.body.color,
+            color_id: req.body.color_id,
             anio: req.body.anio,
             foto: req.file.filename
         })

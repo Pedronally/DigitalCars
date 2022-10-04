@@ -1,40 +1,43 @@
-/*
-window.addEventListener("load", function(){
-    
+window.addEventListener("load", function () {
+  let formularioRegister = document.querySelector("form");
 
-    let formularioRegister = document.querySelector(".create-formu-register");
+  let campoNombre = document.querySelector("input.nombre");
 
-    formularioRegister.addEventListener("submit", function(e){
-        e.preventDefault();
+  let campoUser = document.querySelector("input.email");
+  let emailRegex =
+    /^(?:[^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*|"[^\n"]+")@(?:[^<>()[\].,;:\s@"]+\.)+[^<>()[\]\.,;:\s@"]{2,63}$/i;
+  let campoPsw = document.querySelector("input.contrasenia");
+  let errores = [];
 
-        let campoNombre = document.querySelector("input.name");
+  formularioRegister.addEventListener("submit", async (e) => {
+    e.preventDefault();
 
-        if(campoNombre.value == ""){
-            swal("Oops!", "Introduce un nombre!", "error");
-        } else if (campoNombre.value.length <= 2) {
-            swal("Oops!", "El nombre debe tener al menos 2 caracteres!", "error");
-        }
-        
-        let campoUser = document.querySelector("input.mail");
-        emailRegex = /^(?:[^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*|"[^\n"]+")@(?:[^<>()[\].,;:\s@"]+\.)+[^<>()[\]\.,;:\s@"]{2,63}$/i;
-        if (!emailRegex.test(campoUser.value)) {
-            swal("Oops!", "Email inexistente!", "error");
-        } else if(campoUser.value == ""){
-            swal("Oops!", "El email debe estar completo!", "error");
-        } 
+    console.log("hola");
 
-        //Poner validación de Imagen
-        
-        let campoPsw = document.querySelector("input.psw");
-
-        if(campoPsw.value == ""){
-            swal("Oops!", "Se necesita una contraseña!", "error");
-        } else if (campoPsw.value.length <= 8) {
-            swal("Oops!", "La contraseña debe tener al menos 8 caracteres", "error");
-        }
-
+     if (campoNombre == "") {
+      errores.push("Introduce un nombre!");
+    } else if (campoNombre.value.length <= 2) {
+      errores.push("El nombre debe tener al menos 2 caracteres!");
+    }
+    if (campoUser.value == "") {
+      errores.push("El email debe estar completo!");
+    } else if (!emailRegex.test(campoUser.value)) {
+        errores.push("Email inexistente!");
       
-    })
-
+    }
+   
+    if (campoPsw.value == "") {
+        errores.push(" La contraseña debe tener al menos 8 caracteres");
+      
+    } else if (campoPsw.value.length <= 8) {
+        errores.push("Se necesita una contraseña!");
+   
+    } 
+    if (errores==0){
+        formularioRegister.submit()
+          } else {
+              swal("Ooops!", "Completa los campos!", "error").then(()=>{formularioRegister.submit()})
+              
+          }
+  });
 });
-*/

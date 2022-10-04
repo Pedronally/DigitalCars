@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,16 +10,16 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <title>Digital Cars</title>
 </head>
+
 <body>
-    
     <%- include('./partials/header.ejs') %> 
 
     <main>
-        <div class="create-formu-register">
-            <form  method="POST"  action="/user/register"  enctype="multipart/form-data">
+    <div class="create-formu-register">
+            <form class="formulario" method="POST"  action="/user/register"  enctype="multipart/form-data">
                 <legend class="reg">Registrate</legend>
                 <label for="name" > Nombre y Apellido: </label>
-                <input class="name" type="text" name="nombre" id="name"></input>
+                <input class="nombre" type="text" name="nombre" id="name"></input>
                 <% if (locals.errors && errors.nombre) { %>
                     <p style = "color: red"><%- errors.nombre.msg  %></p>
                 <% } %>     
@@ -28,23 +29,27 @@
                     <p style = "color: red"><%- errors.email.msg  %></p>
                 <% } %>   
                 <label for="fdn" > Fecha de nacimiento: </label>
-                <input  type="date" name="fdn" id="fdn"></input>
+                <input class="fdn" type="date" name="fdn" id="fdn"></input>
                 <% if (locals.errors && errors.fdn) { %>
                     <p style = "color: red"><%- errors.fdn.msg  %></p>
                 <% } %>                   
                 <label for="psw" > Contraseña: </label>
-                <input type="password" name="contrasenia" id="contrasenia"></input>
+                <input class="contrasenia" type="password" name="contrasenia" id="contrasenia"></input>
                 <% if (locals.errors && errors.contrasenia) { %>
                     <p style = "color: red"><%- errors.contrasenia.msg  %></p>
                 <% } %>   
                 <label for="foto">Foto:</label>
-                <input type="file" name="image" id="file" multiple>
+                <input class="image" type="file" name="image" id="file" multiple>
+                <% if (locals.errors && errors.image) { %>
+                    <p style = "color: red"><%- errors.image.msg  %></p>
+                <% } %> 
                 <input class ="boton1" type="submit" value="ENVIAR"></input>
                 <input class ="boton2" type="reset" value="BORRAR"></input>
             </form>
         </div>
     </main>
     <script src="/js/register.js"></script>
+
 </body>
 
     <%- include('./partials/footer.ejs') %> 
