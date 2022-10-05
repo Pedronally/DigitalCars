@@ -4,7 +4,7 @@ const fs = require("fs");
 module.exports = [
 
     body("modelo").notEmpty().withMessage("El modelo tiene que estar completo!"),
-    body("precio").notEmpty().withMessage("El auto tiene que tener precio!").isFloat({min:10, max:100000}).withMessage(""),
+    body("precio").notEmpty().withMessage("El auto tiene que tener precio!").isFloat({min:10, max:1000000}).withMessage(""),
     body("anio").notEmpty().withMessage("El auto tiene que especificar año!").isInt({min:1990, max:2022}).withMessage("Ingrese un año valido"),
     body("color_id").notEmpty().withMessage("Ingrese un color!"),
     body("image").custom((value, {req}) => {

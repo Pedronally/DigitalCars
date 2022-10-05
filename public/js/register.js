@@ -34,7 +34,7 @@ window.addEventListener("load", function () {
    
     } */
     if (errores==0){
-      swal("Ok!", "Registrado con exito!", "success").then(()=>{formularioRegister.submit()})
+      formularioRegister.submit()
           } else {
               swal("Ooops!", "Completa los campos!", "error").then(()=>{formularioRegister.submit()})
               

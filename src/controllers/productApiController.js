@@ -16,6 +16,15 @@ const productApiController = {
                         url : 'detalleDelProducto/'+producto.id_auto
                     })      
                 })
+                let usuarios = []
+                db.Usuario.findAll().then(users=>{
+                    users.forEach(usuario => {
+                        usuarios.push(usuario)
+                    })
+                    
+                })
+
+            
                 db.Color.findAll().then(colores=>{
                     let categorias = []
                     colores.forEach(color=>{
@@ -30,14 +39,17 @@ const productApiController = {
                 let respuesta = {
                 
                     count: productos.length,
-                    data: autos,
+                    productos: autos,
                     categorias: categorias,
+                    cantCategory: categorias.length,
+                    cantUser:usuarios.length,
                     status: 200,
                 }
                 return res.json(respuesta)
+            })
             
             })
-        })
+
                               
     },
     detail:(req,res)=>{
@@ -66,7 +78,8 @@ const productApiController = {
                         precio : producto.precio,
                         anio : producto.anio,
                         color: producto.colores.color,
-                        url : 'localhost:3050/productos/detalle'+producto.id_auto
+                        url : 'localhost:3050/productos/detalle/'+producto.id_auto,
+                        foto: 'C:/Users/matia/Desktop/TP Integrador/grupo_2_DigitalCars/public/images/'+producto.foto
                      }
                      return res.json(respuesta);
            

@@ -12,7 +12,7 @@
             
             <%- include('./partials/header.ejs') %> 
     <main>
-        <div class="ModeloA"> <a id="foto"> <img src="/images/producto b.jpg" alt="Producto B" height="350px"
+        <div class="ModeloA"> <a id="foto"> <img src="/images/<%= auto.foto%>" alt="Producto" height="350px"
             width="600px"> </a>
             <a href="/detalle/<%= auto.id_auto %>"> <h3> BMW <%= auto.modelo %> </h3> </a> 
             <!-- <p>-Este es un auto que brinda a las dos necesidades basicas, confort y velocidad.  
@@ -22,8 +22,7 @@
             </p>
             -->
             <p>
-                El BMW <%= auto.modelo %> tiene un valor de <%= auto.precio %> USD. Cuenta con un motor de
-                <%= auto.motor %> y viene en color <%= auto.color %>
+                El BMW <%= auto.modelo %> tiene un valor de <%= auto.precio %> USD. Año de fabricacion: <%= auto.anio %>. 
             </p>    
         </div>    
     </main>

@@ -28,10 +28,10 @@ window.addEventListener("load", function(){
         }
         console.log(errores)
         if (errores.length==0){
-            swal("Ok","Producto agregado", "success").then(()=>{
+           
                     
                 formularioCreate.submit()
-            })
+            
               } else {
                   swal("Ooops!", "Completa los campos!", "error").then(()=>{
                     
